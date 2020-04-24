@@ -1,0 +1,31 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "umi dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ant-design/icons": "^4.0.6",
+    "@umijs/preset-react": "^1.4.17",
+    "antd": "^4.1.4",
+    "axios": "^0.19.2",
+    "core-js": "^3.6.5",
+    "dva": "^2.4.1",
+    "github-markdown-css": "^4.0.0",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^8.0.8",
+    "koa-sslify": "^4.0.3",
+    "koa-static": "^5.0.0",
+    "koa2-cors": "^2.0.6",
+    "markdown-it": "^10.0.0",
+    "mysql": "^2.18.1",
+    "ramda": "^0.27.0",
+    "umi": "^3.1.1"
+  }
+}
