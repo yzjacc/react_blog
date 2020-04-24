@@ -2,8 +2,8 @@ import './core/polyfill';
 import '@@/core/devScripts';
 import { plugin } from './core/plugin';
 import { createHistory } from './core/history';
-import { ApplyPluginsType } from '/Users/yuzijun/Desktop/test/node_modules/@umijs/runtime';
-import { renderClient } from '/Users/yuzijun/Desktop/test/node_modules/@umijs/renderer-react/dist/index.js';
+import { ApplyPluginsType } from '/Users/yuzijun/Desktop/Github/React-Blog/node_modules/@umijs/runtime';
+import { renderClient } from '/Users/yuzijun/Desktop/Github/React-Blog/node_modules/@umijs/renderer-react/dist/index.js';
 
 
 

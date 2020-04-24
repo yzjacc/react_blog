@@ -1,4 +1,4 @@
-import { ApplyPluginsType } from '/Users/yuzijun/Desktop/test/node_modules/@umijs/runtime';
+import { ApplyPluginsType } from '/Users/yuzijun/Desktop/Github/React-Blog/node_modules/@umijs/runtime';
 import { plugin } from './plugin';
 
 const routes = [
@@ -25,6 +25,11 @@ const routes = [
         "path": "/login",
         "exact": true,
         "component": require('@/pages/login/index.jsx').default
+      },
+      {
+        "path": "/resume",
+        "exact": true,
+        "component": require('@/pages/resume/index.jsx').default
       }
     ]
   }

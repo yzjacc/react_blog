@@ -1,4 +1,4 @@
-import { createBrowserHistory } from '/Users/yuzijun/Desktop/test/node_modules/@umijs/runtime';
+import { createBrowserHistory } from '/Users/yuzijun/Desktop/Github/React-Blog/node_modules/@umijs/runtime';
 
 let options = {
   "basename": "/"

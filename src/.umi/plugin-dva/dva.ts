@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { ApplyPluginsType } from 'umi';
 import dva from 'dva';
 // @ts-ignore
-import createLoading from '/Users/yuzijun/Desktop/test/node_modules/dva-loading/dist/index.esm.js';
+import createLoading from '/Users/yuzijun/Desktop/Github/React-Blog/node_modules/dva-loading/dist/index.esm.js';
 import { plugin, history } from '../core/umiExports';
 
 let app:any = null;
@@ -26,7 +26,7 @@ function _onCreate() {
   (runtimeDva.plugins || []).forEach((plugin:any) => {
     app.use(plugin);
   });
-  app.model({ namespace: 'essay', ...(require('/Users/yuzijun/Desktop/test/src/models/essay.js').default) });
+  app.model({ namespace: 'essay', ...(require('/Users/yuzijun/Desktop/Github/React-Blog/src/models/essay.js').default) });
   return app;
 }
 
