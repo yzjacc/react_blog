@@ -8,9 +8,9 @@ import ContentTitle from '../../components/ContentTitle'
 
 export default () => {
   return (
-    <div>
-      <Tag></Tag><ContentTitle></ContentTitle>
-      <h1>关于我页面</h1>
+    <div className={styles.content}>
+      <div className={styles.tag}><Tag></Tag></div><ContentTitle></ContentTitle>
+      <h1>评论</h1>
       <Comment></Comment>
     </div>
   );

@@ -1,7 +1,8 @@
 const router = require('koa-router')()
 const articleHandler = require('../controllers/articles-handler')
 // const archives = require('../controllers/archives')
-const resume = require('../../resume-master/index')
+// const resume = require('../../resume-master/index')
+// const appjs = require('../../resume-master/static/app')
 
 
 router.get('/getblogs', async (ctx) => {
@@ -25,10 +26,11 @@ router.get('/plusvisit/:id', async (ctx) => {
   ctx.body = await articleHandler.plusVisit(id)
 })
 
-router.get('/resume', async (ctx) => {
-  const id = ctx.params.id
-  ctx.body = resume
-})
+// router.get('/resume', async (ctx) => {
+//   const id = ctx.params.id
+//   ctx.body = resume
+// })
+
 
 router.get('/gethotarticle', async (ctx) => {
   ctx.body = await articleHandler.hotArticle()

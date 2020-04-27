@@ -16,8 +16,6 @@ const app = new Koa()
 
 updateBlog()
 
-
-
 // 允许跨域
 app.use(cors({
   origin: function (ctx) {

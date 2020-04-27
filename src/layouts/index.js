@@ -5,7 +5,6 @@ import { useHistory } from "umi";
 import './index.less'
 
 export default function index(props) {
-  const history = useHistory()
   return (
     <div>
       <Header></Header>

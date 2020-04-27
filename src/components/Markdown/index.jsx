@@ -1,10 +1,20 @@
 import React, { memo, useMemo } from 'react'
 import MarkdownIt from 'markdown-it'
 import 'github-markdown-css'
+var hljs = require('highlight.js')
 
 const md = new MarkdownIt({
   html: true,
-  linkify: true
+  linkify: true,
+  highlight :  function (str, lang) {
+  if (lang && hljs.getLanguage(lang)) {
+    try {
+      return hljs.highlight(lang, str, true).value;
+    } catch (__) {}
+  }
+
+  return ''; // 使用额外的默认转义
+}
 })
 
 // 中文转码

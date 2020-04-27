@@ -7,9 +7,14 @@ const routes = [
     "component": require('@/layouts/index.js').default,
     "routes": [
       {
-        "path": "/Blog/:id",
+        "path": "/404",
         "exact": true,
-        "component": require('@/pages/Blog/:id.js').default
+        "component": require('@/pages/404.js').default
+      },
+      {
+        "path": "/about",
+        "exact": true,
+        "component": require('@/pages/about/index.jsx').default
       },
       {
         "path": "/archive",
@@ -17,19 +22,14 @@ const routes = [
         "component": require('@/pages/archive/index.jsx').default
       },
       {
+        "path": "/blog/:id",
+        "exact": true,
+        "component": require('@/pages/blog/:id.js').default
+      },
+      {
         "path": "/",
         "exact": true,
         "component": require('@/pages/index/index.jsx').default
-      },
-      {
-        "path": "/login",
-        "exact": true,
-        "component": require('@/pages/login/index.jsx').default
-      },
-      {
-        "path": "/resume",
-        "exact": true,
-        "component": require('@/pages/resume/index.jsx').default
       }
     ]
   }

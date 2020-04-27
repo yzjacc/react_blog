@@ -1,0 +1,17 @@
+.aside {
+  margin: 20px 30px;
+}
+.page {
+  width: 400px;
+  height: 30px;
+  margin: 0 auto;
+}
+@media all and (max-width: 1200px) {
+  .aside {
+    display: none;
+  }
+  .content {
+    margin: 0px auto;
+  }
+}
+/*# sourceMappingURL=index.css.map */

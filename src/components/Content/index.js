@@ -14,8 +14,9 @@ import { NavLink } from 'umi'
     }
 
     render(){
+        if (this.props.content == undefined) return null
         const blogList = []
-        for(let i = 0; i < this.props.total; i++){
+        for(let i = 0; i < this.props.content.length; i++){
           // let fileName = pathList.pop();
           // let fileDay = pathList.pop()
           // let fileMonth = pathList.pop()
@@ -32,13 +33,12 @@ import { NavLink } from 'umi'
 }
 
 const mapStateToProps = state => ({
-    content: state.essay.blogs,
-    total: state.essay.blogCount
+    content: state.pageBlog.blogs,
 })
 
 const mapDispatchToProps = dispatch => ({
     onGetContents() {
-        dispatch({ type: "essay/getContents"})
+        dispatch({ type: "pageBlog/getPageBlog" , payload : 1})
     }
 })
 

@@ -1,17 +1,13 @@
 const path = require('path')
 const fs = require('fs')
 const { insertBlogs, getData, getBlogPage, getBlogCount, getSingleBlog, setBlogRead, getHotArticle } = require('../services/db')
-
+const dirname = path.join(__dirname,'../../_posts')
 const sourceHandler = require('../utils/source-handler')
-const articleRoot = path.join(__dirname, '../../articles')
-
 
 // 上传博客信息到数据库
 async function updateBlog() {
-  sourceHandler.traverse(articleRoot, (filePath, label, year, month, day, filename ) => {
-    let title = filename.split('.')[0]
-    // 将文件路径中 / 转为 // 防止转义
-    insertBlogs(title, `${label}`, `${year}-${month}-${day}`, filePath.replace(/\\/g, '\\\\'))
+  sourceHandler.dataJsonList.map(blog => {
+    insertBlogs(blog.title, `${blog.tag[0]}`, `${blog.year}-${blog.month}-${blog.day}`, blog.path)
   })
 }
 
@@ -21,7 +17,7 @@ async function getBlogs() {
   const num = await getBlogCount()
   // 读取markdown文件信息
   data.map(blog => {
-    blog.content = fs.readFileSync(blog.path).toString()
+    blog.content = sourceHandler.getContent(blog.path)
   })
   return {blogs: data, blogCount: num}
 }
@@ -31,7 +27,7 @@ async function getBlogByPage(page) {
   const data = await getBlogPage(page)
   const num = await getBlogCount()
   data.map(blog => {
-    blog.content = fs.readFileSync(blog.path).toString()
+    blog.content = sourceHandler.getContent(blog.path)
   })
   return {blogs: data, blogCount: num}
 }
@@ -39,7 +35,7 @@ async function getBlogByPage(page) {
 async function getSingleBlogContent(id) {
   const arr = await getSingleBlog(id)
   const data = arr[0]
-  data.content = fs.readFileSync(data.path).toString()
+  data.content = sourceHandler.getContent(data.path)
   return data
 }
 

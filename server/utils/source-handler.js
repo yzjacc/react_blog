@@ -1,65 +1,37 @@
+var md = require('markdown-it')();
 const fs = require('fs')
 const path = require('path')
-const R = require('ramda')
-
-// 根据筛选条件读取文档结构
-function readDirs(filter, dir) {
-    return R.filter(filter)(fs.readdirSync(dir))
+const dirname = path.join(__dirname,'../../_posts')
+let files = fs.readdirSync(dirname);
+let dataJsonList = []
+for(let value of files) {
+    if(!value.includes('md')) continue
+    dataJson = {}
+    dataJson['path']=  dirname +'/' + value
+    dataJson['tag'] = []
+    dataJson['year'] = value.split("-")[0]
+    dataJson['month'] = value.split("-")[1]
+    dataJson['day'] = value.split("-")[2]
+    let content = fs.readFileSync(dirname+'/' + value ).toString()
+    let data = content.split("---")[1].split("\n")
+    data.pop()
+    data.shift()
+    for(let value of data){
+        if(value.split(":")[0] == 'title')
+            dataJson['title'] = value.split(":")[1].split('\"')[1]
+        if(value.split(":")[0].indexOf('-') == 0){
+            dataJson['tag'].push(value.split(":")[0].split('-')[1])
+        }
+    }
+    dataJsonList.push(dataJson)
+}
+function getContent (path){
+    let content = fs.readFileSync(path).toString()
+    return content.split("---")[2]
 }
 
-// 判断是否为文件夹
-function isDir(filepath) {
-  return fs.statSync(filepath).isDirectory()
+module.exports = {
+    dataJsonList,
+    getContent
 }
 
-/**
- * 构建文件树 解析markdown文件
- * 目录结构为:
- *  root
- * |-- label 标签
- *    |-- year 年份
- *        |-- month 月份
- *            |-- day 日期
- *                 |-- filename 文件名
- *
- */
-
- function readFilesTreeStructure(root, fn) {
-  return R.pipe(
-  R.map(label => R.pipe(
-  R.pipe(
-    R.map(year => R.pipe(
-      R.pipe(
-        R.map(month => R.pipe(
-          R.pipe(
-            R.map(day => R.pipe(
-              R.map(filename => {
-                const filePath = path.join(root, label, year, month, day, filename)
-                fn(filePath, label, year, month, day, filename)
-                return filePath
-              }),
-              R.objOf(day)
-            )(readDirs(R.endsWith('.md'), path.join(root, label, year, month, day)))),
-            R.reduce(R.mergeDeepLeft, {})
-          ),
-          R.objOf(month)
-        )(readDirs(R.and(R.lte(1), R.gte(31)), path.join(root, label, year, month)))),
-        R.reduce(R.mergeDeepLeft, {})
-      ),
-      R.objOf(year)
-    )(readDirs(R.and(R.lte(1), R.gte(12)), path.join(root, label, year)))),
-    R.reduce(R.mergeDeepLeft, {})
-  ),
-  R.objOf(label)
-  )(readDirs(R.and(true), path.join(root, label)))),
-  R.reduce(R.mergeDeepLeft, {})
-  )(readDirs(R.and(true), root))
- }
-
- exports.traverse = function(root, fn) {
-   if (!isDir(root)) {
-     return {val: 'null'}
-   } else {
-     return readFilesTreeStructure(root, fn)
-   }
- }

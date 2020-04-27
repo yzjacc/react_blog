@@ -10,8 +10,8 @@ module.exports = {
         app: ['./src/entry.js']
     },
     output: {
-        filename: __dirname+'static/[name].js?[hash:6]',
-        path: path.resolve(__dirname)
+        filename: './static/[name].js?[hash:6]',
+        path: path.join(__dirname+'../../dist')
     },
     devServer: {
         contentBase: path.resolve(__dirname)
@@ -19,8 +19,8 @@ module.exports = {
     plugins: [
         // new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-            template: './src/index.html',
-            filename: 'index.html',
+            template: 'src/index.html',
+            filename: 'resume.html',
             inject: 'head',
             minify: {
                 collapseWhitespace: true,
@@ -51,7 +51,7 @@ module.exports = {
                         loader: 'url-loader',
                         options: {
                             limit: 8192,
-                            name: 'static/[name].[ext]?[hash:6]'
+                            name: 'resume/static/[name].[ext]?[hash:6]'
                         }
                     },
                     { // 压缩图片：https://github.com/tcoopman/image-webpack-loader

@@ -17,6 +17,7 @@
     "core-js": "^3.6.5",
     "dva": "^2.4.1",
     "github-markdown-css": "^4.0.0",
+    "highlight.js": "^10.0.0",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^8.0.8",
