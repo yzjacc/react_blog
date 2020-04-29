@@ -1,7 +1,7 @@
 const mysql = require('mysql')
 // 连接数据库, 创建数据连接池
 const pool = mysql.createPool({
-  host: '127.0.0.1', // 数据库地址
+  host: '123.57.78.46', // 数据库地址
   port: 3306, // 端口号 默认为3306
   user: 'root', // 数据库用户名
   password: 'Yu20191123', // 数据库密码

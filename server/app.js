@@ -51,8 +51,8 @@ if (argvs[0] && argvs[0].split('=')[1] === 'true') {
     console.log(`Server is running at 4000 port with SSL`)
   })
 } else {
-  app.listen(8010, () => {
-    console.log(`Server is running at 4000 port`)
+  app.listen(80, () => {
+    console.log(`Server is running at 80 port`)
   })
 }
 
