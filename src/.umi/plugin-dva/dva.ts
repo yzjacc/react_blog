@@ -27,6 +27,7 @@ function _onCreate() {
     app.use(plugin);
   });
   app.model({ namespace: 'essay', ...(require('/Users/yuzijun/Desktop/Github/React-Blog/src/models/essay.js').default) });
+app.model({ namespace: 'label', ...(require('/Users/yuzijun/Desktop/Github/React-Blog/src/models/label.js').default) });
 app.model({ namespace: 'pageBlog', ...(require('/Users/yuzijun/Desktop/Github/React-Blog/src/models/pageBlog.js').default) });
   return app;
 }

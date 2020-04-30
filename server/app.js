@@ -7,13 +7,13 @@ const cors = require('koa2-cors')
 const https = require('https')
 const fs = require('fs')
 const sslify = require('koa-sslify').default
-const { getData } = require('./services/db')
-const { updateBlog, getBlogs, getBlogByPage } = require('./controllers/articles-handler')
+const { getData,deleteAllTable } = require('./services/db')
+const { updateBlog, getBlogs, getBlogByPage, } = require('./controllers/articles-handler')
 
 
 
 const app = new Koa()
-
+deleteAllTable()
 updateBlog()
 
 // 允许跨域

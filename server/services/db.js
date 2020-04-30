@@ -67,13 +67,35 @@ async function getHotArticle() {
   return result
 }
 
+// 获取全部标签
+async function getAllLabel() {
+  let sql = 'SELECT label FROM blog'
+  let data = await query(sql)
+  return data
+}
+
+async function deleteAllTable() {
+  let sql = 'truncate table blog'
+  await query(sql)
+}
+
+async function getSingleLabel(tag) {
+  console.log(tag)
+  let sql = `select * from blog where instr(label,'${tag}')>0`
+  let data = await query(sql)
+  return data
+}
+
 module.exports = {
-  getData, 
+  getData,
+  deleteAllTable,
+  getSingleLabel,
   insertBlogs, 
   getArchives, 
   getBlogPage,
   getBlogCount,
   getSingleBlog,
   setBlogRead,
-  getHotArticle
+  getHotArticle,
+  getAllLabel
 }

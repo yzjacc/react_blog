@@ -26,14 +26,17 @@ router.get('/plusvisit/:id', async (ctx) => {
   ctx.body = await articleHandler.plusVisit(id)
 })
 
-// router.get('/resume', async (ctx) => {
-//   const id = ctx.params.id
-//   ctx.body = resume
-// })
-
-
 router.get('/gethotarticle', async (ctx) => {
   ctx.body = await articleHandler.hotArticle()
+})
+
+router.get('/getlabeltotal', async (ctx) => {
+  ctx.body = await articleHandler.labelTotal()
+})
+
+router.get('/getlabelblogs/:tag', async (ctx) => {
+  const tag = ctx.params.tag
+  ctx.body = await articleHandler.getSingleTag(tag)
 })
 
 // router.get('/getarchives', async (ctx) => {

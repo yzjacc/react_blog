@@ -1,0 +1,48 @@
+.menu {
+  color: #FFF;
+  width: auto;
+  height: 300px;
+  background-image: url(https://pg12138.oss-cn-beijing.aliyuncs.com/img/about-bg.jpg);
+  margin-bottom: 17px;
+}
+.menuha {
+  color: #777;
+  width: auto;
+  height: 30px;
+}
+.menuha::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #edeeee;
+  position: absolute;
+  top: 600px;
+  z-index: -1;
+}
+.title {
+  float: left;
+  font-size: 30px;
+  font-weight: bold ;
+  padding: 10px 0px 0px 20px;
+}
+.resume {
+  display: inline-block;
+  cursor: pointer;
+}
+.link {
+  float: right;
+}
+.link > * {
+  color: #FFF;
+  padding: 20px;
+  line-height: 50px;
+}
+.linkha {
+  float: right;
+}
+.linkha > * {
+  color: #777;
+  padding: 20px;
+  line-height: 50px;
+}
+/*# sourceMappingURL=index.css.map */

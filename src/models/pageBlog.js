@@ -6,8 +6,18 @@ export default {
     },
     reducers: {
         getSingleBlog(state,{payload}) {
-            console.log(payload)
 
+            return {
+                ...payload
+            };
+        },
+        getLabelBlogs(state,{payload}) {
+            console.log(payload)
+            return {
+                ...payload
+            };
+        },
+        getContent(state,{payload}) {
             return {
                 ...payload
             };
@@ -16,7 +26,7 @@ export default {
     effects: {
         *getPageBlog(action , { put }) {
             let page = action.payload
-            let content = yield Axios.get('/api/blog/getblogs/'+page)
+            let content = yield Axios.get('http:///localhost/blog/getblogs/'+page)
             yield put({ type: "getSingleBlog", payload: content.data})
         }
     }

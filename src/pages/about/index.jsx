@@ -1,39 +1,36 @@
-import React,{ useEffect, PureComponent } from 'react';
-import { connect } from "dva"
-import MDRender from '../../components/Markdown'
-import { NavLink } from 'umi'
-import styles from './index.less';
+import React from 'react';
+import Comment from '../../components/Comment';
+import styles from './index.less'
+import Tag from '../../components/Tag';
+import ContentTitle from '../../components/ContentTitle'
+import { Row, Col } from 'antd';
 
-function f(props) {
-    useEffect(props.onGetContents, [])
-    const blogList = []
-    if(props.content == undefined) {return (<div></div>)}
-    for(let i = 0; i < 5; i++){
-        // let fileName = pathList.pop();
-        // let fileDay = pathList.pop()
-        // let fileMonth = pathList.pop()
-        // let fileYear = pathList.pop()
-        blogList.push(
-            <div key={props.content[i].id} className={styles.single}>
-                <NavLink to={`/Blog/${props.content[i].id}`} style={{color:'black',fontSize:'30px'}}>{props.content[i].title}</NavLink>
-                <div className={styles.main}><MDRender content={props.content[i].content} isBase64={false} /></div>
-                <div className={styles.footer}>{props.content[i].time}</div>
-            </div>)
-    }
-    return (<div className={styles.content}>{blogList}</div>)
-    // return (<div></div>)
 
+export default () => {
+    return (
+        <div className={styles.content}>
+            <div className={styles.image}></div>
+            <div className={styles.main}>
+                <div className={styles.title}>
+                    <div className={styles.name}>
+                        「 React 个人博客 」
+                    </div>
+                    <div className={styles.time}>
+                        2020.04.30
+                    </div>
+                </div>
+                <div className={styles.essay}>
+                    <div className={styles.essImg}>
+                    </div>
+                    <div className={styles.comment}>
+                        "Yanshuo.io" is an online full-featured presentation software to create Web-based slides which are linkable, sharable, cross-platform and without delivery friction. It differentiate from traditional presentation tools such as Powerpoint and Keynote due to its web-friendly and its strong belief in Web.
+                    </div>
+                </div>
+                <div className={styles.footer}>
+                    <div className={styles.logo}></div>
+                    <div className={styles.button}>Try it</div>
+                </div>
+            </div>
+        </div>
+    );
 }
-
-const mapStateToProps = state => ({
-    content: state.pageBlog.blogs,
-    total: state.pageBlog.blogCount
-})
-
-const mapDispatchToProps = dispatch => ({
-    onGetContents() {
-        dispatch({ type: "pageBlog/getPageBlog"})
-    }
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(f);

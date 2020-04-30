@@ -32,7 +32,7 @@ import { NavLink } from 'umi'
 
 const mapStateToProps = state => ({
     content: state.essay.blogs,
-    total: state.essay.blogCount
+    total: state.essay.blogCount,
 })
 
 const mapDispatchToProps = dispatch => ({

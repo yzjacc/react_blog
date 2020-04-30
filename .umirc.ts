@@ -1,9 +1,9 @@
 export default {
-    proxy: {
-      '/api': {
-        'target': 'http://yzjweb.xyz/',
-        'changeOrigin': true,
-        'pathRewrite': { '^/api' : '' },
-      },
-    },
+    // proxy: {
+    //   '/api': {
+    //     'target': ' http://192.168.0.104/',
+    //     'changeOrigin': true,
+    //     'pathRewrite': { '^/api' : '' },
+    //   },
+    // },
   }

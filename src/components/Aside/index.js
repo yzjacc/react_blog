@@ -2,8 +2,7 @@ import React from 'react'
 import { NavLink, history} from 'umi'
 import styles from './index.less'
 import Clock from '../Clock'
-// import Tag from '../Tag'
-import { Provider } from 'react-redux'
+import Tag from '../Tag'
 export default function Menu() {
 
     return (
@@ -16,12 +15,7 @@ export default function Menu() {
             </div>
             <div>
                 <h2>标签 🏷️</h2>
-                {/* <Tag>dwadwadwa</Tag>
-                <Tag>dwadwa</Tag>
-                <Tag>d</Tag>
-                <Tag>222</Tag>
-                <Tag>3</Tag>
-                <Tag>412</Tag> */}
+                <Tag></Tag>
                 <hr></hr>
             </div>
             <div>
