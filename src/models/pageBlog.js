@@ -26,7 +26,7 @@ export default {
     effects: {
         *getPageBlog(action , { put }) {
             let page = action.payload
-            let content = yield Axios.get('http:///localhost/blog/getblogs/'+page)
+            let content = yield Axios.get('http://127.0.0.1/blog/getblogs/'+page)
             yield put({ type: "getSingleBlog", payload: content.data})
         }
     }

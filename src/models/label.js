@@ -20,13 +20,13 @@ export default {
     },
     effects: {
         *getContents(action , { put }) {
-            let content = yield Axios.get('http://localhost/blog/getlabeltotal')
+            let content = yield Axios.get('http://127.0.0.1/blog/getlabeltotal')
             yield put({ type: "getContent", payload: content.data})
             // yield put({ type: "getLabelCount", payload: content.labelCount})
         },    
         *getLabelBlogs(action , { put }) {
             console.log(action.payload,"lallalala")
-            let content = yield Axios.get('http://localhost/blog/getlabelblogs/'+ 'HTML')
+            let content = yield Axios.get('http://127.0.0.1/getlabelblogs/'+ 'HTML')
             yield put({ type: "getLabelBlogs", payload: content.data})
         },
     }

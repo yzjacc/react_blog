@@ -1,5 +1,5 @@
 .content {
-  width: 1200px;
+  width: 500px;
   margin: 20px auto;
 }
 .main {
@@ -23,16 +23,5 @@
   float: right;
   margin-right: 20px;
 }
-@media all and (max-width: 1200px) {
-  .content {
-    width: 100%;
-    padding: 0 50px;
-  }
-  .main {
-    width: 80%;
-  }
-  .single {
-    width: 100%;
-  }
-}
+
 /*# sourceMappingURL=index.css.map */

@@ -1,7 +1,7 @@
 import React from 'react';
 import Content from '../../components/Content'
 import Aside from '../../components/Aside'
-import './index.less'
+import styles from './index.less'
 import { connect } from "dva"
 
 import { Pagination } from 'antd';
@@ -9,9 +9,9 @@ import { Pagination } from 'antd';
 function f(props)  {
   return (
       <>
-        <div className="aside"><Aside></Aside></div>
+        <div className={styles.aside}><Aside></Aside></div>
         <Content style={{margin : '0px auto'}}></Content>
-         <div className="page">
+        <div className={styles.page}>
              <Pagination size="small"
                          total={props.total}
                          pageSize ={5}
