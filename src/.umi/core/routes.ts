@@ -1,4 +1,5 @@
-import { ApplyPluginsType } from '/Users/yuzijun/Desktop/Github/React-Blog/node_modules/@umijs/runtime';
+// @ts-nocheck
+import { ApplyPluginsType } from '/Users/bytedance/Desktop/GitHub/React-Blog/node_modules/@umijs/runtime';
 import { plugin } from './plugin';
 
 const routes = [

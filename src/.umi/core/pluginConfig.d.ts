@@ -48,7 +48,19 @@ export interface IConfigFromPlugins {
   base?: string;
   chainWebpack?: () => any;
   chunks?: string[];
-  cssLoader?: {};
+  /**
+   * more css-loader options see https://webpack.js.org/loaders/css-loader/#options
+   */
+  cssLoader?: {
+    url?: boolean | (() => any);
+    import?: boolean | (() => any);
+    modules?: boolean | string | {};
+    sourceMap?: boolean;
+    importLoaders?: number;
+    onlyLocals?: boolean;
+    esModule?: boolean;
+    localsConvention?: "asIs" | "camelCase" | "camelCaseOnly" | "dashes" | "dashesOnly";
+  };
   cssModulesTypescriptLoader?: {
     mode?: "emit" | "verify";
   };
@@ -65,9 +77,15 @@ export interface IConfigFromPlugins {
      */
     port?: number;
     host?: string;
-    https?: {} | boolean;
-    http2?: boolean;
+    https?:
+      | {
+          key?: string;
+          cert?: string;
+          [k: string]: any;
+        }
+      | boolean;
     headers?: {};
+    writeToDisk?: boolean | (() => any);
     [k: string]: any;
   };
   devtool?: string;
@@ -83,11 +101,27 @@ export interface IConfigFromPlugins {
   exportStatic?: {
     htmlSuffix?: boolean;
     dynamicRoot?: boolean;
+    /**
+     * extra render paths only enable in ssr
+     */
+    extraRoutePaths?: () => any;
   };
   externals?: {} | string | (() => any);
   extraBabelPlugins?: any[];
   extraBabelPresets?: any[];
   extraPostCSSPlugins?: any[];
+  /**
+   * fork-ts-checker-webpack-plugin options see https://github.com/TypeStrong/fork-ts-checker-webpack-plugin#options
+   */
+  forkTSChecker?: {
+    async?: boolean;
+    typescript?: boolean | {};
+    eslint?: {};
+    issue?: {};
+    formatter?: string | {};
+    logger?: {};
+    [k: string]: any;
+  };
   hash?: boolean;
   ignoreMomentLocale?: boolean;
   inlineLimit?: number;
@@ -96,12 +130,13 @@ export interface IConfigFromPlugins {
     fileName?: string;
     publicPath?: string;
     basePath?: string;
+    writeToFileEmit?: boolean;
   };
   mountElementId?: "";
   mpa?: {};
   nodeModulesTransform?: {
     type?: "all" | "none";
-    exclude?: any[];
+    exclude?: string[];
   };
   outputPath?: "";
   plugins?: string[];
@@ -110,12 +145,27 @@ export interface IConfigFromPlugins {
   proxy?: {};
   publicPath?: string;
   runtimePublicPath?: boolean;
+  ssr?: {
+    /**
+     * remove window.g_initialProps in html, to force execing Page getInitialProps  functions
+     */
+    forceInitial?: boolean;
+    /**
+     * disable serve-side render in umi dev mode.
+     */
+    devServerRender?: boolean;
+    mode?: "stream" | "string";
+    /**
+     * static markup in static site
+     */
+    staticMarkup?: boolean;
+  };
   singular?: boolean;
   styleLoader?: {};
   targets?: {};
   terserOptions?: {};
   theme?: {};
-  forkTSCheker?: {};
+  runtimeHistory?: {};
   favicon?: string;
   headScripts?: any[];
   links?: any[];

@@ -1,4 +1,5 @@
-import { createBrowserHistory } from '/Users/yuzijun/Desktop/Github/React-Blog/node_modules/@umijs/runtime';
+// @ts-nocheck
+import { createBrowserHistory } from '/Users/bytedance/Desktop/GitHub/React-Blog/node_modules/@umijs/runtime';
 
 let options = {
   "basename": "/"
@@ -7,7 +8,8 @@ if ((<any>window).routerBase) {
   options.basename = (<any>window).routerBase;
 }
 
-let history = createBrowserHistory(options);
+// remove initial history because of ssr
+let history: any = process.env.__IS_SERVER ? null : createBrowserHistory(options);
 export const createHistory = (hotReload = false) => {
   if (!hotReload) {
     history = createBrowserHistory(options);

@@ -1,9 +1,10 @@
+// @ts-nocheck
 import './core/polyfill';
 import '@@/core/devScripts';
 import { plugin } from './core/plugin';
 import { createHistory } from './core/history';
-import { ApplyPluginsType } from '/Users/yuzijun/Desktop/Github/React-Blog/node_modules/@umijs/runtime';
-import { renderClient } from '/Users/yuzijun/Desktop/Github/React-Blog/node_modules/@umijs/renderer-react/dist/index.js';
+import { ApplyPluginsType } from '/Users/bytedance/Desktop/GitHub/React-Blog/node_modules/@umijs/runtime';
+import { renderClient } from '/Users/bytedance/Desktop/GitHub/React-Blog/node_modules/@umijs/renderer-react/dist/index.js';
 
 
 
@@ -17,8 +18,9 @@ const getClientRender = (args: { hot?: boolean } = {}) => plugin.applyPlugins({
       routes: require('./core/routes').routes,
       plugin,
       history: createHistory(args.hot),
+      isServer: process.env.__IS_SERVER,
       rootElement: 'root',
-      defaultTitle: '',
+      defaultTitle: ``,
     });
   },
   args,
@@ -29,7 +31,7 @@ export default clientRender();
 
 
     window.g_umi = {
-      version: '3.1.1',
+      version: '3.2.9',
     };
   
 

@@ -1,8 +1,9 @@
+// @ts-nocheck
 import { Component } from 'react';
 import { ApplyPluginsType } from 'umi';
 import dva from 'dva';
 // @ts-ignore
-import createLoading from '/Users/yuzijun/Desktop/Github/React-Blog/node_modules/dva-loading/dist/index.esm.js';
+import createLoading from '/Users/bytedance/Desktop/GitHub/React-Blog/node_modules/dva-loading/dist/index.esm.js';
 import { plugin, history } from '../core/umiExports';
 
 let app:any = null;
@@ -26,9 +27,9 @@ function _onCreate() {
   (runtimeDva.plugins || []).forEach((plugin:any) => {
     app.use(plugin);
   });
-  app.model({ namespace: 'essay', ...(require('/Users/yuzijun/Desktop/Github/React-Blog/src/models/essay.js').default) });
-app.model({ namespace: 'label', ...(require('/Users/yuzijun/Desktop/Github/React-Blog/src/models/label.js').default) });
-app.model({ namespace: 'pageBlog', ...(require('/Users/yuzijun/Desktop/Github/React-Blog/src/models/pageBlog.js').default) });
+  app.model({ namespace: 'essay', ...(require('/Users/bytedance/Desktop/GitHub/React-Blog/src/models/essay.js').default) });
+app.model({ namespace: 'label', ...(require('/Users/bytedance/Desktop/GitHub/React-Blog/src/models/label.js').default) });
+app.model({ namespace: 'pageBlog', ...(require('/Users/bytedance/Desktop/GitHub/React-Blog/src/models/pageBlog.js').default) });
   return app;
 }
 

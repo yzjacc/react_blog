@@ -1,3 +1,4 @@
+// @ts-nocheck
 
 // @ts-ignore
 import { InitialState as InitialStateType } from '../plugin-initial-state/models/initialState';

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { IRoute } from '@umijs/core';
 import { AnyAction } from 'redux';
 import React from 'react';
@@ -5,9 +6,9 @@ import { EffectsCommandMap, SubscriptionAPI } from 'dva';
 import { match } from 'react-router-dom';
 import { Location, LocationState, History } from 'history';
 
-export * from '/Users/yuzijun/Desktop/Github/React-Blog/src/models/essay';
-export * from '/Users/yuzijun/Desktop/Github/React-Blog/src/models/label';
-export * from '/Users/yuzijun/Desktop/Github/React-Blog/src/models/pageBlog';
+export * from '/Users/bytedance/Desktop/GitHub/React-Blog/src/models/essay';
+export * from '/Users/bytedance/Desktop/GitHub/React-Blog/src/models/label';
+export * from '/Users/bytedance/Desktop/GitHub/React-Blog/src/models/pageBlog';
 
 export interface Action<T = any> {
   type: T
