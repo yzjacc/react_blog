@@ -6,6 +6,7 @@ const sourceHandler = require('../utils/source-handler')
 
 // 上传博客信息到数据库
 async function updateBlog() {
+  console.log(sourceHandler)
   sourceHandler.dataJsonList.map(blog => {
     insertBlogs(blog.title, `${blog.tag}`, `${blog.year}-${blog.month}-${blog.day}`, blog.path)
   })

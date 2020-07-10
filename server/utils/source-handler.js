@@ -1,10 +1,12 @@
 var md = require('markdown-it')();
 const fs = require('fs')
-const path = require('path')
-const dirname = path.join(__dirname,'../../_posts')
+const path = require('path');
+const { isArray } = require('core-js/fn/array');
+const dirname = path.join(__dirname,'../../_posts_copy')
 let files = fs.readdirSync(dirname);
 let dataJsonList = []
 for(let value of files) {
+    
     if(!value.includes('md')) continue
     dataJson = {}
     dataJson['path']=  dirname +'/' + value
@@ -13,6 +15,7 @@ for(let value of files) {
     dataJson['month'] = value.split("-")[1]
     dataJson['day'] = value.split("-")[2]
     let content = fs.readFileSync(dirname+'/' + value ).toString()
+    if(isArray(content)) continue
     let data = content.split("---")[1].split("\n")
     data.pop()
     data.shift()

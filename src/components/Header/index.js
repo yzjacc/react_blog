@@ -6,7 +6,7 @@ import { useHistory } from "umi";
 export default function Menu() {
     return (
         <div className={useHistory().location.pathname == '/about' ? styles.menuha : styles.menu }>
-            <div className={styles.title}>前端技术栈</div>
+            <div className={styles.title}>Yuzijun博客</div>
             <div className={useHistory().location.pathname == '/about' ? styles.linkha : styles.link }>
                 <NavLink to="/">首页</NavLink>
                 <NavLink to="/archive">档案</NavLink>
