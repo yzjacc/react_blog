@@ -36,7 +36,6 @@ app.use(router.routes()).use(router.allowedMethods())
 app.use(koaStatic(path.join(__dirname, '../dist')))
 
 const argvs = process.argv.slice(2)
-console.log(argvs[0])
 
 if (argvs[0] && argvs[0].split('=')[1] === 'true') {
   // 强制转化 http 请求为 https

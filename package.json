@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd server && node app.js",
-    "serve": "umi dev",
+    "start":"umi dev" ,
+    "serve":"cd server && node app.js",
     "build": "umi build"
   },
   "author": "",

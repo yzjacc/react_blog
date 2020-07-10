@@ -33,65 +33,119 @@ async function getBlogCount() {
 // 向数据库写入文章
 // 设置 标题为唯一键
 async function insertBlogs(title, label, time, path) {
-  let sql = `insert into blog (title, label, time, path)
-            values
-             ('${title}', '${label}', '${time}', '${path}')`
-  let result = await query(sql)
-  return result
+  try {
+    let sql = `insert into blog (title, label, time, path)
+  values
+   ('${title}', '${label}', '${time}', '${path}')`
+    let result = await query(sql)
+    return result
+
+  } catch (e) {
+
+    console.log(e)
+
+  }
+
 }
 
 // 增加阅读数
 async function setBlogRead(id) {
-  let sql = `update blog set visit = visit + 1 where id = ${id}`
-  let result = await query(sql)
-  return result
+  try {
+    let sql = `update blog set visit = visit + 1 where id = ${id}`
+    let result = await query(sql)
+    return result
+
+  } catch (e) {
+
+    console.log(e)
+
+  }
+
 }
 
 // 获取博客
 async function getData() {
-  let dataList = await selectAllData()
-  return dataList
+  try {
+    let dataList = await selectAllData()
+    return dataList
+
+  } catch (e) {
+    console.log(e)
+
+  }
+
 }
 
 // 获取全部文章
 async function getArchives() {
-  let sql = `select * from blog group by YEAR(time)`
-  let result = await query(sql)
-  return result
+  try {
+    let sql = `select * from blog group by YEAR(time)`
+    let result = await query(sql)
+    return result
+
+  } catch (e) {
+    console.log(e)
+
+  }
+
 }
 
 // 获取文章热榜
 async function getHotArticle() {
-  let sql = `select * from blog order by visit desc limit 5`
-  let result = await query(sql)
-  return result
+  try {
+    let sql = `select * from blog order by visit desc limit 5`
+    let result = await query(sql)
+    return result
+  } catch (e) {
+    console.log(e)
+
+  }
+
 }
 
 // 获取全部标签
 async function getAllLabel() {
-  let sql = 'SELECT label FROM blog'
-  let data = await query(sql)
-  return data
+  try {
+    let sql = 'SELECT label FROM blog'
+    let data = await query(sql)
+    return data
+  } catch (e) {
+    console.log(e)
+
+  }
+
 }
 
 async function deleteAllTable() {
-  let sql = 'truncate table blog'
-  await query(sql)
+  try {
+    let sql = 'truncate table blog'
+    await query(sql)
+  } catch (e) {
+    console.log(e)
+
+  }
+
 }
 
 async function getSingleLabel(tag) {
-  console.log(tag)
-  let sql = `select * from blog where instr(label,'${tag}')>0`
-  let data = await query(sql)
-  return data
+  try {
+    console.log(tag)
+    let sql = `select * from blog where instr(label,'${tag}')>0`
+    let data = await query(sql)
+    return data
+  } catch (e) {
+    console.log(e)
+
+  }
+
 }
 
 module.exports = {
   getData,
   deleteAllTable,
   getSingleLabel,
-  insertBlogs, 
-  getArchives, 
+  insertBlogs,
+  getArchives,
   getBlogPage,
   getBlogCount,
   getSingleBlog,
