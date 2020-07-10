@@ -16,7 +16,7 @@ const app = new Koa()
 deleteAllTable()
 updateBlog()
 
-// 允许跨域
+// 允许跨域的
 app.use(cors({
   origin: function (ctx) {
     return "*" // 允许来自所有域名请求
