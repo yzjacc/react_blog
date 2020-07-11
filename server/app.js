@@ -35,15 +35,14 @@ app.use(router.routes()).use(router.allowedMethods())
 
 app.use(koaStatic(path.join(__dirname, '../dist')))
 
-const argvs = process.argv.slice(2)
 
 if (_isSSL) {
   // 强制转化 http 请求为 https
   app.use(sslify());
 
   const options = {
-    key: fs.readFileSync(path.join(__dirname, './ssl/ssl.key')),
-    cert: fs.readFileSync(path.join(__dirname, './ssl/ssl.crt'))
+    key: fs.readFileSync(path.join(__dirname, '../ssl/ssl.key')),
+    cert: fs.readFileSync(path.join(__dirname, '../ssl/ssl.crt'))
   }
 
   https.createServer(options, app.callback()).listen(443, () => {
