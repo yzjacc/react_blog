@@ -13,11 +13,11 @@ export default {
     },
     effects: {
         *getContents(action , { put }) {
-            let content = yield Axios.get('http://127.0.0.1/blog/getblogs')
+            let content = yield Axios.get('https://www.yzjacc.cn/blog/getblogs')
             yield put({ type: "getContent", payload: content.data})
         },
         *getLabelBlogs(action , { put }) {
-            let content = yield Axios.get('http://127.0.0.1/blog/getlabelblogs/' + action.payload)
+            let content = yield Axios.get('https://www.yzjacc.cn/blog/getlabelblogs/' + action.payload)
             yield put({ type: "getContent", payload: content.data})
         }
     }

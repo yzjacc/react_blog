@@ -9,7 +9,7 @@ const fs = require('fs')
 const sslify = require('koa-sslify').default
 const { getData,deleteAllTable } = require('./services/db')
 const { updateBlog, getBlogs, getBlogByPage, } = require('./controllers/articles-handler')
-
+const _isSSL = true;
 
 
 const app = new Koa()
@@ -37,7 +37,7 @@ app.use(koaStatic(path.join(__dirname, '../dist')))
 
 const argvs = process.argv.slice(2)
 
-if (argvs[0] && argvs[0].split('=')[1] === 'true') {
+if (_isSSL) {
   // 强制转化 http 请求为 https
   app.use(sslify());
 
@@ -46,8 +46,8 @@ if (argvs[0] && argvs[0].split('=')[1] === 'true') {
     cert: fs.readFileSync(path.join(__dirname, './ssl/ssl.crt'))
   }
 
-  https.createServer(options, app.callback()).listen(4000, () => {
-    console.log(`Server is running at 4000 port with SSL`)
+  https.createServer(options, app.callback()).listen(443, () => {
+    console.log(`Server is running at 443 port with SSL`)
   })
 } else {
   app.listen(80, () => {
