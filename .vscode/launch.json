@@ -18,7 +18,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "启动程序",
+            "name": "启动node程序",
             "skipFiles": [
                 "<node_internals>/**"
             ],
