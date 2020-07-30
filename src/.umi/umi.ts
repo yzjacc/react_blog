@@ -20,7 +20,7 @@ const getClientRender = (args: { hot?: boolean } = {}) => plugin.applyPlugins({
       history: createHistory(args.hot),
       isServer: process.env.__IS_SERVER,
       rootElement: 'root',
-      defaultTitle: ``,
+      defaultTitle: `于子俊的博客`,
     });
   },
   args,

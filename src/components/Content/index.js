@@ -25,7 +25,7 @@ import { NavLink } from 'umi'
             <div key={this.props.content[i].id} className={styles.single}>
                 <NavLink to={`/Blog/${this.props.content[i].id}`} style={{color:'black',fontSize:'30px'}}>{this.props.content[i].title}</NavLink>
                 <div className={styles.main}><MDRender content={this.props.content[i].content} isBase64={false} /></div>
-                <div className={styles.footer}>{this.props.content[i].time}</div>
+                <div className={styles.footer}>{this.props.content[i].time.substring(0,10)}</div>
             </div>)
         }
         return (<div className={styles.content}>{blogList}</div>)
