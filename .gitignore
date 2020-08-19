@@ -5,3 +5,4 @@ id_github_rsa.pub
 .vscode/launch.json
 ssl/ssl.crt
 ssl/ssl.key
+src/.umi
