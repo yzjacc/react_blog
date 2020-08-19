@@ -6,4 +6,5 @@ export default {
     //     'pathRewrite': { '^/api' : '' },
     //   },
     // },
+    title: '于子俊的博客',
   }

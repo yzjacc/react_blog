@@ -1,7 +1,8 @@
 node_modules
+.vscode
 id_github_rsa
 id_github_rsa.pub
-.vscode
 .vscode/launch.json
 ssl/ssl.crt
 ssl/ssl.key
+src/.umi
