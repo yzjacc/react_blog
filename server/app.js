@@ -9,7 +9,7 @@ const fs = require('fs')
 const sslify = require('koa-sslify').default
 const { getData,deleteAllTable } = require('./services/db')
 const { updateBlog, getBlogs, getBlogByPage, } = require('./controllers/articles-handler')
-const _isSSL = true;
+const _isSSL = false;
 
 
 const app = new Koa()
