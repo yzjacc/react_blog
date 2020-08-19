@@ -6,3 +6,4 @@ id_github_rsa.pub
 ssl/ssl.crt
 ssl/ssl.key
 src/.umi
+src/.umi-production
