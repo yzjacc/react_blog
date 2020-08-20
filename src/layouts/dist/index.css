@@ -1,0 +1,14 @@
+:root {
+  min-width: 500px;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #fafafa;
+}
+.content {
+  padding: 20px 0;
+  background-color: #f1f2f5;
+}
+
+/*# sourceMappingURL=index.css.map */
