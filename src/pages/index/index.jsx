@@ -6,21 +6,21 @@ import { connect } from "dva"
 
 import { Pagination } from 'antd';
 
-function f(props)  {
-  return (
-      <>
-        <div className={styles.aside}><Aside></Aside></div>
-        <Content style={{margin : '0px auto'}}></Content>
-        <div className={styles.page}>
-             <Pagination size="small"
-                         total={props.total}
-                         pageSize ={5}
-                         onChange={props.onGetPage}
-              />
-         </div>
+function f(props) {
+    return (
+        <>
+            <div className={styles.aside}><Aside></Aside></div>
+            <Content></Content>
+            <div className={styles.page}>
+                <Pagination size="small"
+                    total={props.total}
+                    pageSize={5}
+                    onChange={props.onGetPage}
+                />
+            </div>
         </>
 
-  );
+    );
 }
 const mapStateToProps = state => ({
     total: state.pageBlog.blogCount,
@@ -29,7 +29,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     onGetPage(e) {
-        dispatch({ type: "pageBlog/getPageBlog" , payload : e})
+        dispatch({ type: "pageBlog/getPageBlog", payload: e })
     }
 })
 

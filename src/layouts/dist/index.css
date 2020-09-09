@@ -4,10 +4,11 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: #fafafa;
+  background-color: #f1f2f5;
 }
 .content {
-  padding: 20px 0;
+  overflow: hidden;
+  padding-bottom: 100px;
   background-color: #f1f2f5;
 }
 
