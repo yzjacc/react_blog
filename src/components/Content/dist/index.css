@@ -4,43 +4,38 @@
   float: left;
   padding-left: 80px;
 }
-
 .main {
   max-height: 500px;
   height: 400px;
-  letter-spacing:3px;
+  letter-spacing: 3px;
   word-wrap: break-word;
   word-break: break-all;
   overflow: hidden;
   padding: 5px 0;
-  border-bottom:1px solid rgba(68,68,68,0.65);;
+  border-bottom: 1px solid rgba(68, 68, 68, 0.65);
 }
-
-.single{
+.single {
   background-color: white;
   border-radius: 8px;
   margin-bottom: 16px;
   padding: 50px;
-
-  // height: 600px;
 }
-
-.footer{
+.footer {
   float: left;
   margin-top: 10px;
   font-size: 0.875rem;
   margin-right: 20px;
 }
-
-@media all and (max-width:1200px){
-  .content{
+@media all and (max-width: 1200px) {
+  .content {
     width: 100%;
   }
   .main {
     width: 80%;
-   
   }
-  .single{
+  .single {
     width: 100%;
   }
 }
+
+/*# sourceMappingURL=index.css.map */
