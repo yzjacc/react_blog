@@ -38,7 +38,7 @@ app.use(koaStatic(path.join(__dirname, '../dist')))
 app.use(async ( ctx ) => {
   if ( ctx.url !== '/index' ) {
     ctx.response.type = 'html';
-    ctx.response.body = fs.createReadStream('./dist/index.html');
+    ctx.response.body = fs.createReadStream(path.join(__dirname, '../dist/index.html'));
   }
 })
 
