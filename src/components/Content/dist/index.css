@@ -1,7 +1,5 @@
 .content {
-  width: 1000px;
   margin: 0px auto;
-  float: left;
   padding-left: 80px;
 }
 .main {
@@ -25,17 +23,6 @@
   margin-top: 10px;
   font-size: 0.875rem;
   margin-right: 20px;
-}
-@media all and (max-width: 1200px) {
-  .content {
-    width: 100%;
-  }
-  .main {
-    width: 80%;
-  }
-  .single {
-    width: 100%;
-  }
 }
 
 /*# sourceMappingURL=index.css.map */
