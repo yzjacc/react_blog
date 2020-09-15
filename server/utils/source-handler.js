@@ -15,6 +15,7 @@ for(let value of files) {
     dataJson['month'] = value.split("-")[1]
     dataJson['day'] = value.split("-")[2]
     let content = fs.readFileSync(dirname+'/' + value ).toString()
+    if(content) continue
     let data = content.split("---")[1].split("\n")
     data.pop()
     data.shift()

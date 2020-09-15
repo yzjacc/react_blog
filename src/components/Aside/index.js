@@ -8,19 +8,16 @@ export default function Menu() {
     return (
 
         <div className={styles.aside}>
-            <div >
+            <div className={styles.module}>
                 <h2>日期 📅</h2>
                 <Clock></Clock>
-                <hr></hr>
             </div>
-            <div>
+            <div className={styles.module}>
                 <h2>标签 🏷️</h2>
                 <Tag></Tag>
-                <hr></hr>
             </div>
-            <div>
+            <div className={styles.module}>
                 <h2>网站 💻</h2>
-                <hr></hr>
             </div>
         </div>
 

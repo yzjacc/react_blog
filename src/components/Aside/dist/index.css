@@ -1,0 +1,17 @@
+.aside {
+  float: right;
+  width: 275px;
+  height: 800px;
+}
+.module {
+  border-radius: 8px;
+  padding: 2px 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+h2 {
+  margin: 20px 0;
+}
+
+/*# sourceMappingURL=index.css.map */
