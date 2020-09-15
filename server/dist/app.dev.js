@@ -54,7 +54,7 @@ app.use(function _callee(ctx) {
         case 0:
           if (ctx.url !== '/index') {
             ctx.response.type = 'html';
-            ctx.response.body = fs.createReadStream('./dist/index.html');
+            ctx.response.body = fs.createReadStream(path.join(__dirname, '../dist/index.html'));
           }
 
         case 1:
