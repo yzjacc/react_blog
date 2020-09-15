@@ -25,7 +25,6 @@ try {
     dataJson['month'] = value.split("-")[1];
     dataJson['day'] = value.split("-")[2];
     var content = fs.readFileSync(dirname + '/' + value).toString();
-    if (content) continue;
     var data = content.split("---")[1].split("\n");
     data.pop();
     data.shift();
