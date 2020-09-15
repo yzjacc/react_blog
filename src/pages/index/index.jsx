@@ -10,7 +10,8 @@ function f(props) {
     return (
         <>
             <div className={styles.aside}><Aside></Aside></div>
-            <Content></Content>
+            <div className={styles.content}><Content></Content></div>
+
             <div className={styles.page}>
                 <Pagination size="small"
                     total={props.total}
