@@ -7,3 +7,4 @@ ssl/ssl.crt
 ssl/ssl.key
 src/.umi
 src/.umi-production
+dist/*

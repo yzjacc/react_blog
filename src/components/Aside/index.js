@@ -12,6 +12,11 @@ export default function Menu() {
                 <h2>日期 📅</h2>
                 <Clock></Clock>
             </div>
+            {/* <div className={styles.module}> */}
+                {/* <h2>日期 📅</h2> */}
+                {/* <img src = 'https://pg12138.oss-cn-beijing.aliyuncs.com/img/2020/touxiang.jpeg' className={styles.img}></img> */}
+                {/* <Clock></Clock> */}
+            {/* </div> */}
             <div className={styles.module}>
                 <h2>标签 🏷️</h2>
                 <Tag></Tag>
