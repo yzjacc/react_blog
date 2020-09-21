@@ -11,25 +11,29 @@ class Menu extends React.Component {
 
     constructor(props) {
         super(props);
-        this.saveRef = ref => {this.refDom = ref};
+        this.saveRef = ref => { this.refDom = ref };
         this.state = {
             i: 0,
             divStyle: {
-                height: `${window.innerHeight}px`
+                height: `${window.innerHeight}px`,
+                backgroundImage: `url(https://pg12138.oss-cn-beijing.aliyuncs.com/img/2020/020.jpg)`
+
             },
             pointStyle: {
             }
         };
+
         setInterval(() => {
             this.setState({
-                i: (this.state.i + 1)
-                    % 10
-            })
-            this.setState({
-                divStyle: {
-                    ...this.state.divStyle,
-                    backgroundImage: `url(https://pg12138.oss-cn-beijing.aliyuncs.com/img/2020/00${this.state.i}.jpg)`
-                }
+                i: Math.floor(Math.random()
+                    * 100 / 2)
+            }, () => {
+                this.setState({
+                    divStyle: {
+                        ...this.state.divStyle,
+                        backgroundImage: `url(https://pg12138.oss-cn-beijing.aliyuncs.com/img/2020/0${this.state.i}.jpg)`
+                    }
+                })
             })
         }, 10000)
     }
@@ -46,7 +50,7 @@ class Menu extends React.Component {
     }
     render() {
         return (
-            <div  className={styles.menu} style={this.state.divStyle}>
+            <div className={styles.menu} style={this.state.divStyle}>
                 <div className={styles.contain}>
                     <div className={styles.title}>Yuzijun's Blog</div>
                     <div className={styles.link}>
