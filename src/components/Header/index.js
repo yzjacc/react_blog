@@ -16,8 +16,7 @@ class Menu extends React.Component {
             i: 0,
             divStyle: {
                 height: `${window.innerHeight}px`,
-                backgroundImage: `url(https://pg12138.oss-cn-beijing.aliyuncs.com/img/2020/01.jpg)`
-
+                backgroundImage: `url(https://pg12138.oss-cn-beijing.aliyuncs.com/img/2020/020.jpg)`
 
             },
             pointStyle: {

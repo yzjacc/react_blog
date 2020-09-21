@@ -9,7 +9,7 @@ export default function Menu() {
 
         <div className={styles.aside}>
             <div className={styles.module}>
-                <h2>日期 📅</h2>
+                <h2 className={styles.iconfont}>&#xe6da; 公告</h2>
                 <Clock></Clock>
             </div>
             {/* <div className={styles.module}> */}
@@ -18,11 +18,11 @@ export default function Menu() {
                 {/* <Clock></Clock> */}
             {/* </div> */}
             <div className={styles.module}>
-                <h2>标签 🏷️</h2>
+                <h2 className={styles.iconfont}>&#xe62f; 标签</h2>
                 <Tag></Tag>
             </div>
             <div className={styles.module}>
-                <h2>网站 💻</h2>
+                <h2 className={styles.iconfont}>&#xe626; 导航</h2>
             </div>
         </div>
 
