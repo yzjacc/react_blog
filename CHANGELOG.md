@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/yzjacc/React-Blog/compare/v1.1.0...v1.2.0) (2020-09-22)
+
+
+### Features
+
+* **dev-1.3:** 接入commit开发工具,并且撰写接入文档，自动可生成CHANGEKLOG ([7e3b2f7](https://github.com/yzjacc/React-Blog/commit/7e3b2f71b89e271fc0d0f4ad9500f7001055edf5))
+
 ## 1.1.0 (2020-09-22)
 
 
