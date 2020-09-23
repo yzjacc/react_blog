@@ -56,18 +56,26 @@ class Menu extends React.Component {
                     <div className={styles.link}>
                         <div className={styles.button} onClick={() => {
                             this.props.history.push('/')
+                            this.pop()
+
                         }}><div className={styles.iconfont}>&#xe61e;</div><p>首页</p></div>
                         <div className={styles.button} onClick={() => {
                             this.props.history.push('/archive')
+                            this.pop()
+
                         }}><div className={styles.iconfont}>&#xe762;</div><p>档案</p></div>
                         <div className={styles.button} onClick={() => {
                             window.location.href = 'http://www.yzjacc.cn/resume.html'
-                        }}><div className={styles.iconfont}>&#xe7b5;</div><p>简历</p></div>
+                        }}><div className={styles.icon}>&#xe637;</div><p>简历</p></div>
+                        <div className={styles.button} onClick={() => {
+                            this.props.history.push('/book')
+                        }}><div className={styles.icon}>&#xe620;</div><p>书单</p></div>
                         <div className={styles.button} onClick={() => {
                             this.props.history.push('/about')
+                            this.pop()
                         }}><div className={styles.iconfont}>&#xe622;</div><p>关于</p></div>
                     </div></div>
-                <div className={styles.point} onClick={this.pop.bind(this)} style={this.state.pointStyle}>&#xe668;
+                <div className={styles.point} onClick={()=>{this.pop()}} style={this.state.pointStyle}>&#xe668;
 </div>
             </div>
         )

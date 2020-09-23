@@ -28,6 +28,11 @@ const routes = [
         "component": require('@/pages/blog/:id.js').default
       },
       {
+        "path": "/book",
+        "exact": true,
+        "component": require('@/pages/book/index.jsx').default
+      },
+      {
         "path": "/",
         "exact": true,
         "component": require('@/pages/index/index.jsx').default
