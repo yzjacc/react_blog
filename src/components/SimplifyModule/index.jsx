@@ -12,7 +12,7 @@ export default
         super(props);
     }
     render() {
-        let { time, title, content } = this.props.data
+        let { time, title, content,src } = this.props.data
         return (
             <div className={styles.main}>
                 <div className={styles.title}>
@@ -25,6 +25,7 @@ export default
                 </div>
                 <div className={styles.essay}>
                     <div className={styles.essImg}>
+                        <img className={styles.img} src="https://pg12138.oss-cn-beijing.aliyuncs.com/img/IMG_0044.JPG"/>
                     </div>
                     <div className={styles.comment}>
                         {content}
