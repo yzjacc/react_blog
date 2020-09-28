@@ -65,7 +65,7 @@ class Menu extends React.Component {
 
                         }}><div className={styles.iconfont}>&#xe762;</div><p>档案</p></div>
                         <div className={styles.button} onClick={() => {
-                            window.location.href = 'http://www.yzjacc.cn/resume.html'
+                            window.location.href = 'https://www.yzjacc.cn/resume.html'
                         }}><div className={styles.icon}>&#xe637;</div><p>简历</p></div>
                         <div className={styles.button} onClick={() => {
                             this.props.history.push('/book')
