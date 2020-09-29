@@ -11,8 +11,8 @@ export default () => {
     <div className={styles.content}>
       <div className={styles.tag}><Tag></Tag></div>
       <ContentTitle></ContentTitle>
-      <h1>评论</h1>
-      <Comment></Comment>
+      {/* <h1>评论</h1> */}
+      {/* <Comment></Comment> */}
     </div>
   );
 }

@@ -20,7 +20,7 @@ import { ApplyPluginsType } from 'umi';
 import { history, plugin } from '../core/umiExports';
             
 import { message, notification } from 'antd';
-import useUmiRequest from '/Users/bytedance/Desktop/GitHub/React-Blog/node_modules/@umijs/use-request';
+import useUmiRequest, { UseRequestProvider } from '/Users/bytedance/Desktop/GitHub/React-Blog/node_modules/@ahooksjs/use-request';
 import {
   BaseOptions,
   BasePaginatedOptions,
@@ -36,9 +36,9 @@ import {
   PaginatedOptionsWithFormat,
   PaginatedParams,
   PaginatedResult,
-} from '/Users/bytedance/Desktop/GitHub/React-Blog/node_modules/@umijs/use-request/lib/types';
+} from '/Users/bytedance/Desktop/GitHub/React-Blog/node_modules/@ahooksjs/use-request/lib/types';
 
-type ResultWithData<T = any> = { data: T; [key: string]: any };
+type ResultWithData<T = any> = { data?: T; [key: string]: any };
 
 function useRequest<
   R = any,
@@ -58,7 +58,7 @@ function useRequest<R extends LoadMoreFormatReturn = any, RR = any>(
   options: LoadMoreOptionsWithFormat<R, RR>,
 ): LoadMoreResult<R>;
 function useRequest<
-  R extends ResultWithData<LoadMoreFormatReturn> = any,
+  R extends ResultWithData<LoadMoreFormatReturn | any> = any,
   RR extends R = any
 >(
   service: CombineService<R, LoadMoreParams<R['data']>>,
@@ -271,4 +271,4 @@ const request: RequestMethodInUmi = (url: any, options: any) => {
   return requestMethod(url, options);
 };
 
-export { request, useRequest };
+export { request, useRequest, UseRequestProvider };

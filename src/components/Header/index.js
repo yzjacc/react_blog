@@ -16,8 +16,8 @@ class Menu extends React.Component {
             i: 0,
             divStyle: {
                 height: `${window.innerHeight}px`,
-                backgroundImage: `url(https://pg12138.oss-cn-beijing.aliyuncs.com/img/2020/020.jpg)`
-
+                backgroundImage: `url(https://pg12138.oss-cn-beijing.aliyuncs.com/img/2020/0${Math.floor(Math.random()
+                * 100 / 2)}.jpg)`
             },
             pointStyle: {
             }
@@ -27,13 +27,19 @@ class Menu extends React.Component {
             this.setState({
                 i: Math.floor(Math.random()
                     * 100 / 2)
+
             }, () => {
-                this.setState({
-                    divStyle: {
-                        ...this.state.divStyle,
-                        backgroundImage: `url(https://pg12138.oss-cn-beijing.aliyuncs.com/img/2020/0${this.state.i}.jpg)`
-                    }
-                })
+                let img = new Image();
+                img.src = `https://pg12138.oss-cn-beijing.aliyuncs.com/img/2020/0${this.state.i}.jpg`;
+                img.onload = () => {
+                    this.setState({
+                        divStyle: {
+                            ...this.state.divStyle,
+                            backgroundImage: `url(https://pg12138.oss-cn-beijing.aliyuncs.com/img/2020/0${this.state.i}.jpg)`
+                        }
+                    })
+                }
+
             })
         }, 10000)
     }
@@ -75,7 +81,7 @@ class Menu extends React.Component {
                             this.pop()
                         }}><div className={styles.iconfont}>&#xe622;</div><p>关于</p></div>
                     </div></div>
-                <div className={styles.point} onClick={()=>{this.pop()}} style={this.state.pointStyle}>&#xe668;
+                <div className={styles.point} onClick={() => { this.pop() }} style={this.state.pointStyle}>&#xe668;
 </div>
             </div>
         )

@@ -20,7 +20,7 @@ export default {
     },
     effects: {
         *getContents(action , { put }) {
-            let content = yield Axios.get('https//www.yzjacc.cn/blog/getlabeltotal')
+            let content = yield Axios.get('https://www.yzjacc.cn/blog/getlabeltotal')
             yield put({ type: "getContent", payload: content.data})
             // yield put({ type: "getLabelCount", payload: content.labelCount})
         },    

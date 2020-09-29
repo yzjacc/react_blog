@@ -22,9 +22,11 @@ export default function Menu() {
                 <h2 className={styles.title}>&#xe62f; 标签</h2>
                 <Tag></Tag>
             </div>
-            <div className={styles.module}>
+            {/* <div className={styles.module}>
                 <h2 className={styles.title}>&#xe626; 导航</h2>
-            </div>
+                <a>Github</a>
+                <a>Github</a>
+            </div> */}
         </div>
 
     )

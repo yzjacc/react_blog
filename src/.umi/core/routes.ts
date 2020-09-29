@@ -2,7 +2,8 @@
 import { ApplyPluginsType } from '/Users/bytedance/Desktop/GitHub/React-Blog/node_modules/@umijs/runtime';
 import { plugin } from './plugin';
 
-const routes = [
+export function getRoutes() {
+  const routes = [
   {
     "path": "/",
     "component": require('@/layouts/index.js').default,
@@ -41,11 +42,12 @@ const routes = [
   }
 ];
 
-// allow user to extend routes
-plugin.applyPlugins({
-  key: 'patchRoutes',
-  type: ApplyPluginsType.event,
-  args: { routes },
-});
+  // allow user to extend routes
+  plugin.applyPlugins({
+    key: 'patchRoutes',
+    type: ApplyPluginsType.event,
+    args: { routes },
+  });
 
-export { routes };
+  return routes;
+}

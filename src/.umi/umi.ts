@@ -2,26 +2,32 @@
 import './core/polyfill';
 import '@@/core/devScripts';
 import { plugin } from './core/plugin';
+import './core/pluginRegister';
 import { createHistory } from './core/history';
 import { ApplyPluginsType } from '/Users/bytedance/Desktop/GitHub/React-Blog/node_modules/@umijs/runtime';
 import { renderClient } from '/Users/bytedance/Desktop/GitHub/React-Blog/node_modules/@umijs/renderer-react/dist/index.js';
+import { getRoutes } from './core/routes';
 
 
 
 
-const getClientRender = (args: { hot?: boolean } = {}) => plugin.applyPlugins({
+const getClientRender = (args: { hot?: boolean; routes?: any[] } = {}) => plugin.applyPlugins({
   key: 'render',
   type: ApplyPluginsType.compose,
   initialValue: () => {
-    return renderClient({
-      // @ts-ignore
-      routes: require('./core/routes').routes,
-      plugin,
-      history: createHistory(args.hot),
-      isServer: process.env.__IS_SERVER,
-      rootElement: 'root',
-      defaultTitle: `于子俊的博客`,
+    const opts = plugin.applyPlugins({
+      key: 'modifyClientRenderOpts',
+      type: ApplyPluginsType.modify,
+      initialValue: {
+        routes: args.routes || getRoutes(),
+        plugin,
+        history: createHistory(args.hot),
+        isServer: process.env.__IS_SERVER,
+        rootElement: 'root',
+        defaultTitle: `于子俊的博客`,
+      },
     });
+    return renderClient(opts);
   },
   args,
 });
@@ -31,7 +37,7 @@ export default clientRender();
 
 
     window.g_umi = {
-      version: '3.2.9',
+      version: '3.2.19',
     };
   
 
@@ -40,6 +46,13 @@ export default clientRender();
 if (module.hot) {
   // @ts-ignore
   module.hot.accept('./core/routes', () => {
-    getClientRender({ hot: true })();
+    const ret = require('./core/routes');
+    if (ret.then) {
+      ret.then(({ getRoutes }) => {
+        getClientRender({ hot: true, routes: getRoutes() })();
+      });
+    } else {
+      getClientRender({ hot: true, routes: ret.getRoutes() })();
+    }
   });
 }
