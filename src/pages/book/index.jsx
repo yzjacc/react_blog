@@ -30,7 +30,15 @@ export default () => {
             '不迁怒 不贰过  -- 颜回\n'+ '大家求财  --寻找共同目的'
         }
         }
-      ></SimplifyModule>
+      ></SimplifyModule><SimplifyModule
+      data={{
+        title: '「 从0到1 」',
+        time: '2020.09.29',
+        url: 'https://pg12138.oss-cn-beijing.aliyuncs.com/img/IMG_0109.JPG',
+        content: '我们当下的任务是找到创新的独特方式，使得未来不仅仅与众不同，而且更加美好，即从0到1。最重要的第一步是独立思考。只有重新认识世界，如同古人第一眼看见这个世界一样新奇，我们才能重构世界，守护未来。'
+      }
+      }
+    ></SimplifyModule>
     </div>
   );
 }

@@ -15,20 +15,12 @@ class Tag extends PureComponent {
 
     render() {
         const blogList = []
-        // for(let i = 0;i < this.props.total; i++){
-        //     if(this.props.content[i].label)
-        //     blogList.push(<div key={i} className={styles.tag}>
-        //             {this.props.content[i].label}
-        //         </div>)
-        // }
         for (let label in this.props.content) {
-            console.log(label)
             blogList.push(<div className={styles.tag} style={{ fontSize: 13 + Math.random() * 10 + "px" }} onClick={() => { this.props.onGetLabelBlogs(label) }}>
                 {label}
             </div>)
         }
         return (blogList)
-        // return (<div></div>)
     }
 }
 
