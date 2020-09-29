@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/yzjacc/React-Blog/compare/v1.4.0...v1.3.1) (2020-09-29)
+
+
+### Bug Fixes
+
+* 🐛 版本号修改 ([52fbabc](https://github.com/yzjacc/React-Blog/commit/52fbabc17760e70632f8933a5d93246416294334))
+
 ## [1.4.0](https://github.com/yzjacc/React-Blog/compare/v1.2.0...v1.4.0) (2020-09-29)
 
 
