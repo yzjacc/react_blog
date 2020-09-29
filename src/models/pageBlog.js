@@ -12,7 +12,6 @@ export default {
             };
         },
         getLabelBlogs(state,{payload}) {
-            console.log(payload)
             return {
                 ...payload
             };

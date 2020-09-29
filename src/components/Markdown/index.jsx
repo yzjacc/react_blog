@@ -1,21 +1,24 @@
 import React, { memo, useMemo } from 'react'
 import MarkdownIt from 'markdown-it'
 import 'github-markdown-css'
-var hljs = require('highlight.js')
+import 'highlight.js/styles/github.css';
+import hljs from 'highlight.js'
 
 const md = new MarkdownIt({
-  html: true,
-  linkify: true,
-  highlight :  function (str, lang) {
-  if (lang && hljs.getLanguage(lang)) {
-    try {
-      return hljs.highlight(lang, str, true).value;
-    } catch (__) {}
-  }
+  highlight: function (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
 
-  return ''; // 使用额外的默认转义
-}
-})
+      try {
+
+        return '<pre class="hljs"><code>' +
+               hljs.highlight(lang, str, true).value +
+               '</code></pre>';
+      } catch (__) {}
+    }
+
+    return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
+  }
+});
 
 // 中文转码
 function b64_to_utf8 (str) {
