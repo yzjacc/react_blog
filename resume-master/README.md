@@ -1,7 +1,3 @@
-## Reaper Lee 简历
-在线地址: [Reaper Lee 简历](https://reaperlee.cn/resume/)
-
-Forked from [@ Cong Min](https://github.com/mcc108/resume)
 
 
 - 0、**安装依赖：** `npm i`
@@ -11,5 +7,4 @@ Forked from [@ Cong Min](https://github.com/mcc108/resume)
 - 4、**预览：** 浏览器打开 `/index.html` 查看结果
 
 > chrome浏览器 > 打印 > 目标另存为`PDF` > 更多设置无边距 > 即可导出
-
 
