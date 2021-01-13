@@ -16,6 +16,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.0.6",
     "@umijs/preset-react": "^1.4.17",
+    "analyze": "0.0.14",
     "antd": "^4.1.4",
     "axios": "^0.19.2",
     "commitizen": "^4.2.1",
