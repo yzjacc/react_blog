@@ -1,11 +1,10 @@
 import React from 'react';
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { useHistory } from "umi";
 import './index.less'
 
 export default function index(props) {
-
+  console.log("saaa");
   return (
     <div>
       <Header></Header>
