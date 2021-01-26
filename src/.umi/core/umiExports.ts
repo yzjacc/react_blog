@@ -6,4 +6,3 @@ export * from '../plugin-dva/connect';
 export * from '../plugin-initial-state/exports';
 export * from '../plugin-model/useModel';
 export * from '../plugin-request/request';
-export * from '../plugin-helmet/exports';

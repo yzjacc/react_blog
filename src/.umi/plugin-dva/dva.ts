@@ -5,13 +5,10 @@ import dva from 'dva';
 // @ts-ignore
 import createLoading from '/Users/bytedance/Desktop/GitHub/React-Blog/node_modules/dva-loading/dist/index.esm.js';
 import { plugin, history } from '../core/umiExports';
-import ModelEssay0 from '/Users/bytedance/Desktop/GitHub/React-Blog/src/models/essay.js';
-import ModelLabel1 from '/Users/bytedance/Desktop/GitHub/React-Blog/src/models/label.js';
-import ModelPageBlog2 from '/Users/bytedance/Desktop/GitHub/React-Blog/src/models/pageBlog.js';
 
 let app:any = null;
 
-export function _onCreate(options = {}) {
+function _onCreate() {
   const runtimeDva = plugin.applyPlugins({
     key: 'dva',
     type: ApplyPluginsType.modify,
@@ -22,8 +19,7 @@ export function _onCreate(options = {}) {
     
     ...(runtimeDva.config || {}),
     // @ts-ignore
-    ...(typeof window !== 'undefined' && window.g_useSSR ? { initialState: window.g_initialProps } : {}),
-    ...(options || {}),
+    ...(window.g_useSSR ? { initialState: window.g_initialData } : {}),
   });
   
   app.use(createLoading());
@@ -31,9 +27,9 @@ export function _onCreate(options = {}) {
   (runtimeDva.plugins || []).forEach((plugin:any) => {
     app.use(plugin);
   });
-  app.model({ namespace: 'essay', ...ModelEssay0 });
-app.model({ namespace: 'label', ...ModelLabel1 });
-app.model({ namespace: 'pageBlog', ...ModelPageBlog2 });
+  app.model({ namespace: 'essay', ...(require('/Users/bytedance/Desktop/GitHub/React-Blog/src/models/essay.js').default) });
+app.model({ namespace: 'label', ...(require('/Users/bytedance/Desktop/GitHub/React-Blog/src/models/label.js').default) });
+app.model({ namespace: 'pageBlog', ...(require('/Users/bytedance/Desktop/GitHub/React-Blog/src/models/pageBlog.js').default) });
   return app;
 }
 
@@ -44,10 +40,7 @@ export function getApp() {
 export class _DvaContainer extends Component {
   constructor(props: any) {
     super(props);
-    // run only in client, avoid override server _onCreate()
-    if (typeof window !== 'undefined') {
-      _onCreate();
-    }
+    _onCreate();
   }
 
   componentWillUnmount() {

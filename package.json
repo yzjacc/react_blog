@@ -7,9 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "umi dev",
     "serve": "cd server && node app.js",
-    "build": "umi build",
+    "build": "npx umi build",
     "release": "standard-version",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "analyze": "ANALYZE=1 npx umi build"
+    
   },
   "author": "yuzijun",
   "license": "ISC",
