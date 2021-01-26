@@ -128,7 +128,7 @@ export interface IConfigFromPlugins {
   lessLoader?: {};
   manifest?: {
     fileName?: string;
-    publicPath?: "";
+    publicPath?: string;
     basePath?: string;
     writeToFileEmit?: boolean;
   };
@@ -179,7 +179,6 @@ export interface IConfigFromPlugins {
   antd?: {
     dark?: boolean;
     compact?: boolean;
-    config?: {};
   };
   dva?: {
     immer?: boolean;
