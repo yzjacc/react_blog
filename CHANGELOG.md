@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/yzjacc/React-Blog/compare/v1.3.1...v1.5.0) (2021-01-27)
+
+
+### Features
+
+* 🎸 dart文章修改 ([7ffd51a](https://github.com/yzjacc/React-Blog/commit/7ffd51ae68290e5baf5e46ea3bcd7cd087eb450c))
+* 简历优化与修改 ([cd8b506](https://github.com/yzjacc/React-Blog/commit/cd8b5069d4074fdad762452015aa88bc4bf1c035))
+
 ### [1.3.1](https://github.com/yzjacc/React-Blog/compare/v1.4.0...v1.3.1) (2020-09-29)
 
 

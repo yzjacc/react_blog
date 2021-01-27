@@ -1,6 +1,6 @@
 {
   "name": "Zijun_blog",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,6 @@
     "release": "standard-version",
     "commit": "git-cz",
     "analyze": "ANALYZE=1 npx umi build"
-    
   },
   "author": "yuzijun",
   "license": "ISC",
