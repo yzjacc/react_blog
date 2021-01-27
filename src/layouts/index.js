@@ -4,7 +4,6 @@ import Footer from '../components/Footer'
 import './index.less'
 
 export default function index(props) {
-  console.log("saaa");
   return (
     <div>
       <Header></Header>
