@@ -6,18 +6,17 @@ import { useHistory } from "umi";
 import { withRouter } from 'react-router-dom';
 import { complement, none } from 'ramda';
 
-
-class Menu extends React.Component {
-
+let demo = 0;
+class Menu extends React.PureComponent {
     constructor(props) {
         super(props);
-        this.saveRef = ref => { this.refDom = ref };
+        demo++;
         this.state = {
             i: 0,
             divStyle: {
                 height: `${window.innerHeight}px`,
                 backgroundImage: `url(https://pg12138.oss-cn-beijing.aliyuncs.com/img/2020/0${Math.floor(Math.random()
-                * 100 / 2)}.jpg)`
+                    * 100 / 2)}.jpg)`
             },
             pointStyle: {
             }
@@ -42,6 +41,13 @@ class Menu extends React.Component {
 
             })
         }, 10000)
+        if (demo == 1) {
+            setTimeout(() => {
+                this.props.history.push('/')
+
+            })
+            console.log('componentDidMount');
+        }
     }
     pop() {
         this.setState({
@@ -63,18 +69,17 @@ class Menu extends React.Component {
                         <div className={styles.button} onClick={() => {
                             this.props.history.push('/')
                             this.pop()
-
                         }}><div className={styles.iconfont}>&#xe61e;</div><p>首页</p></div>
                         <div className={styles.button} onClick={() => {
                             this.props.history.push('/archive')
                             this.pop()
-
                         }}><div className={styles.iconfont}>&#xe762;</div><p>档案</p></div>
                         <div className={styles.button} onClick={() => {
                             window.location.href = 'https://www.yzjacc.cn/resume.html'
                         }}><div className={styles.icon}>&#xe637;</div><p>简历</p></div>
                         <div className={styles.button} onClick={() => {
                             this.props.history.push('/book')
+                            this.pop()
                         }}><div className={styles.icon}>&#xe620;</div><p>书单</p></div>
                         <div className={styles.button} onClick={() => {
                             this.props.history.push('/about')
