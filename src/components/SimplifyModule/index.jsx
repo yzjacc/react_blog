@@ -12,7 +12,7 @@ export default
         super(props);
     }
     render() {
-        let { time, title, content,url } = this.props.data
+        let { time, title, content, url, isShowImg = true } = this.props.data
         return (
             <div className={styles.main}>
                 <div className={styles.title}>
@@ -24,9 +24,9 @@ export default
                     </div>
                 </div>
                 <div className={styles.essay}>
-                    <div className={styles.essImg}>
-                        <img className={styles.img} src={url}/>
-                    </div>
+                    {isShowImg ? <div className={styles.essImg}>
+                        <img className={styles.img} src={url} />
+                    </div> : null}
                     <div className={styles.comment}>
                         {content}
                     </div>
