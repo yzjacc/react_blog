@@ -17,14 +17,11 @@ import { NavLink } from 'umi'
         if (this.props.content == undefined) return null
         const blogList = []
         for(let i = 0; i < this.props.content.length; i++){
-          // let fileName = pathList.pop();
-          // let fileDay = pathList.pop()
-          // let fileMonth = pathList.pop()
-          // let fileYear = pathList.pop()
+            // console.log(this.props.content[i].content.split('\n').join('\n'));
           blogList.push(
             <div key={this.props.content[i].id} className={styles.single}>
                 <NavLink to={`/Blog/${this.props.content[i].id}`} style={{color:'inherit',fontSize:'1.375rem'}}>{this.props.content[i].title}</NavLink>
-                <div className={styles.main}><MDRender content={this.props.content[i].content} isBase64={false} /></div>
+                <div className={styles.main}><MDRender content={this.props.content[i].content.split('\n').slice(0,25).join('\n')} isBase64={false} /></div>
                 <div className={styles.footer}>{this.props.content[i].time.substring(0,10)}</div>
             </div>)
         }
@@ -38,7 +35,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     onGetContents() {
-        dispatch({ type: "pageBlog/getPageBlog" , payload : 1})
+        dispatch({ type: "pageBlog/getPageBlog" , payload : 0})
     }
 })
 

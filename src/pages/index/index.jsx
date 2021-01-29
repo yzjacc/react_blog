@@ -30,7 +30,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     onGetPage(e) {
-        dispatch({ type: "pageBlog/getPageBlog", payload: e })
+        dispatch({ type: "pageBlog/getPageBlog", payload: e - 1 })
     }
 })
 
