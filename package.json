@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "umi dev",
-    "serve": "cd server && node app.js",
+    "serve": "cd server && node app.js && nodemon app.js",
+    "build-resume": "cd resume-master && npm run build",
     "build": "npx umi build",
     "release": "standard-version",
     "commit": "git-cz",
@@ -34,6 +35,7 @@
     "koa2-cors": "^2.0.6",
     "markdown-it": "^10.0.0",
     "mysql": "^2.18.1",
+    "nodemon": "^2.0.7",
     "ramda": "^0.27.0",
     "react-masonry-component": "^6.2.1",
     "standard-version": "^9.0.0",
