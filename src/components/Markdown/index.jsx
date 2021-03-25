@@ -25,13 +25,13 @@ function b64_to_utf8 (str) {
   return decodeURIComponent(escape(window.atob(str)))
 }
 
-export default memo(function MarkdownRender ({ content, isBase64 }) {
+export default memo(function MarkdownRender ({ content, isBase64, style}) {
   const markdown = isBase64 ? b64_to_utf8(content) : content
 
   const html = useMemo(() => md.render(markdown), [markdown])
 
   return (
-    <div className="markdown-body">
+    <div className="markdown-body" style={style}>
       <div dangerouslySetInnerHTML={{ __html: html }}></div>
     </div>
   )

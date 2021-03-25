@@ -14,22 +14,12 @@ export default () => {
             <SimplifyModule
                 data={{
                     title: '「 个人简介 」',
-                    time: '2020.04.30',
-                    url: 'https://pg12138.oss-cn-beijing.aliyuncs.com/img/IMG_0044.JPG',
-                    content: '"Yanshuo.io" is an online full-featured presentation software to create Web-based slides which are linkable, sharable, cross-platform and without delivery friction. It differentiate from traditional presentation tools such as Powerpoint and Keynote due to its web-friendly and its strong belief in Web.'
+                    time: '2021.03.20',
+                    url: 'https://pg12138.oss-cn-beijing.aliyuncs.com/img/home-bg-art.jpg',
+                    content: '一枚年轻的码农，老家位于黑龙江，高中毕业后，进入本地非著名本科就读软件工程。专业目前就职于北京字节跳动有限公司 作为前端开发工程师 目前工作方向是教育方向欢迎同行一起探讨。'
                 }
                 }
             ></SimplifyModule>
-            {/* <SimplifyModule
-                data={{
-                    title: '个人简介',
-                    time: '2021.01.28',
-                    isShowImg:false,
-                    url: 'https://pg12138.oss-cn-beijing.aliyuncs.com/img/IMG_0044.JPG',
-                    content: '一位来自某地某公司的 前端开发工程师 目前大三\n专注于个人成长 以及公司产品优化'
-                }
-                }
-            ></SimplifyModule> */}
         </div>
     );
 }
