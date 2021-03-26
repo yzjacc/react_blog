@@ -1,17 +1,10 @@
 .aside {
-  margin: 20px 30px;
+  margin: 1.25rem 1.875rem;
 }
 .page {
-  width: 400px;
-  height: 30px;
+  height: 1.875rem;
   margin: 0 auto;
 }
-@media all and (max-width: 1200px) {
-  .aside {
-    display: none;
-  }
-  .content {
-    margin: 0px auto;
-  }
+@media screen and (max-width: 75rem) {
 }
 /*# sourceMappingURL=index.css.map */

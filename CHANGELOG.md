@@ -4,8 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.6.1](https://github.com/yzjacc/React-Blog/compare/v1.7.0...v1.6.1) (2021-03-26)
 
-## [1.7.0](https://github.com/yzjacc/React-Blog/compare/v1.5.1...v1.7.0) (2021-03-26)
-
 
 ### Features
 

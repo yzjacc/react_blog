@@ -22,7 +22,7 @@ import { NavLink } from 'umi'
           // let fileYear = pathList.pop()
           blogList.push(
             <div key={this.props.content[i].id} className={styles.single}>
-                <NavLink to={`/Blog/${this.props.content[i].id}`} style={{color: 'rgb(64, 64, 64)',fontSize:'22px'}}>{this.props.content[i].title}</NavLink>
+                <NavLink to={`/Blog/${this.props.content[i].id}`} style={{color: 'rgb(64, 64, 64)',fontSize:'1.375rem'}}>{this.props.content[i].title}</NavLink>
                 <div className={styles.time}>{this.props.content[i].time.substring(0,10)}</div>
             </div>)
         }
