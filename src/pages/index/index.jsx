@@ -14,8 +14,10 @@ function f(props) {
 
             <div className={styles.page}>
                 <Pagination size="small"
+                    simple
                     total={props.total}
                     pageSize={5}
+                    className={styles.Pagination}
                     onChange={props.onGetPage}
                 />
             </div>

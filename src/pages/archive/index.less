@@ -1,11 +1,25 @@
 
 .tag{
-    width: 800px;
+    width: 50rem;
     margin: 0 auto;
-    margin: 20px 0;
+    margin: 1.25rem 0;
 }
 
 .content{
-    width: 800px;
+    width: 50rem;
     margin: 0 auto;
 }
+
+@media screen and (max-width:28.125rem) {
+    .content{
+        width: 100%;
+        margin: 0;
+    }
+    .tag{
+        width: 100%;
+        margin: 0 1rem;
+        font-size: 1rem;
+        // margin: rem 0;
+    }
+}
+

@@ -21,7 +21,7 @@ class Counter extends PureComponent {
             blogList.push(
                 <div key={this.props.content[i].id} className={styles.single}>
                     <div className={styles.title}><NavLink to={`/Blog/${this.props.content[i].id}`} style={{color:'inherit'}}>{this.props.content[i].title}</NavLink></div>
-                    <div className={styles.main}><MDRender content={this.props.content[i].content.split('\n').slice(0, 25).join('\n')} isBase64={false} style={{color:'#4c4948'}}/></div>
+                    <div className={styles.main}><MDRender content={this.props.content[i].content.split('\n').slice(0, 25).join('\n')} isBase64={false} style={{color:'#4c4948',fontSize: "1rem"}}/></div>
                     <div className={styles.footer}>{this.props.content[i].time.substring(0, 10)}</div>
                 </div>)
         }

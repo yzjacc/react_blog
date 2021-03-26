@@ -22,6 +22,7 @@
   margin-bottom: 16px;
   transition-duration: 0.5s;
   padding: 40px 50px 50px 50px;
+  min-width: 25rem;
 }
 
 .single:hover {
@@ -48,4 +49,19 @@
 .title:hover {
   color: rgba(24, 22, 26, 0.65);
   font-size: 1.425rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .content {
+    margin: 0px auto;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .content {
+    margin: 0px;
+    width: 100%;
+    padding: 0;
+  }
 }
