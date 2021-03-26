@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/yzjacc/React-Blog/compare/v1.5.1...v1.7.0) (2021-03-26)
+
+
+### Features
+
+* :fire: 页面内容模块优化 首页展示错误优化 ([14d8606](https://github.com/yzjacc/React-Blog/commit/14d86069f64eefc00b9992ff2ae11d2dbc01c347))
+* 数据打包 ([2cf8f01](https://github.com/yzjacc/React-Blog/commit/2cf8f01c576ce0f31a366c06e250f26070b8783b))
+
 ### [1.5.1](https://github.com/yzjacc/React-Blog/compare/v1.5.0...v1.5.1) (2021-01-27)
 
 
