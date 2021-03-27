@@ -42,7 +42,7 @@ app.use(async ( ctx ) => {
   }
 })
 
-if (_isSSL) {
+// if (_isSSL) {
   // 强制转化 http 请求为 https
   app.use(sslify());
 
@@ -54,9 +54,9 @@ if (_isSSL) {
   https.createServer(options, app.callback()).listen(443, () => {
     console.log(`Server is running at 443 port with SSL`)
   })
-} else {
+// } else {
   app.listen(80, () => {
     console.log(`Server is running at 80 port`)
   })
-}
+// }
 
