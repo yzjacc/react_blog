@@ -11,7 +11,8 @@
     "build": "npx umi build",
     "release": "standard-version",
     "commit": "git-cz",
-    "analyze": "ANALYZE=1 npx umi build"
+    "analyze": "ANALYZE=1 npx umi build",
+    "resume": "cd resume-master && npm run dev"
   },
   "author": "yuzijun",
   "license": "ISC",
