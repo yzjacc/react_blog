@@ -10,7 +10,7 @@ module.exports = {
         app: ['./src/entry.js']
     },
     output: {
-        filename: 'static/[name].js?[hash:6]',
+        filename: '../dist/static/[name].js?[hash:6]',
         path: path.resolve(__dirname)
     },
     devServer: {
@@ -20,7 +20,7 @@ module.exports = {
         // new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            filename: 'resume.html',
+            filename: '../dist/resume.html',
             inject: 'head',
             minify: {
                 collapseWhitespace: true,
