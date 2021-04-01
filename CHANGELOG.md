@@ -2,14 +2,6 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [1.8.0](https://github.com/yzjacc/React-Blog/compare/v1.6.1...v1.8.0) (2021-04-01)
-
-
-### Features
-
-* 🎸 博客升级 移动端兼容 ([b6d5687](https://github.com/yzjacc/React-Blog/commit/b6d56878660783aec8afb04f36a36e2079e39779))
-* 🎸 首页按钮自体修复 ([c89d4cb](https://github.com/yzjacc/React-Blog/commit/c89d4cba7720474644221acc62b121c8b4b12175))
-
 ## [1.7.0](https://github.com/yzjacc/React-Blog/compare/v1.6.1...v1.7.0) (2021-03-29)
 
 
