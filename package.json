@@ -1,18 +1,19 @@
 {
   "name": "Zijun_blog",
-  "version": "1.6.1",
+  "version": "1..0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "umi dev",
+    "dev:web": "umi dev",
     "serve": "cd server && node app.js && nodemon app.js",
     "build-resume": "cd resume-master && npm run build",
-    "build": "npx umi build",
+    "build:all": "npx umi build && npm run build-resume",
+    "build:web": "npx umi build",
     "release": "standard-version",
     "commit": "git-cz",
     "analyze": "ANALYZE=1 npx umi build",
-    "resume": "cd resume-master && npm run dev"
+    "dev:resume": "cd resume-master && npm run dev"
   },
   "author": "yuzijun",
   "license": "ISC",
