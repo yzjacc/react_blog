@@ -55,7 +55,7 @@ class Menu extends React.PureComponent {
         return (
             <div className={styles.menu} style={this.state.divStyle}>
                 <div className={styles.contain}>
-                    <div className={styles.title}>Yuzijun's Blog</div>
+                    <div className={styles.title}>Hugo Yu</div>
                     <div className={styles.link}>
                         <div className={styles.button} onClick={() => {
                             this.props.history.push('/')
