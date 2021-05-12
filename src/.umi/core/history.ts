@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { createBrowserHistory } from '/Users/bytedance/Desktop/GitHub/React-Blog/node_modules/@umijs/runtime';
+import { createBrowserHistory, History } from '/Users/bytedance/Desktop/GitHub/React-Blog/node_modules/@umijs/runtime';
 
 let options = {
   "basename": "/"
@@ -9,18 +9,13 @@ if ((<any>window).routerBase) {
 }
 
 // remove initial history because of ssr
-let history: any = process.env.__IS_SERVER ? null : createBrowserHistory(options);
+let history: History = process.env.__IS_SERVER ? null : createBrowserHistory(options);
 export const createHistory = (hotReload = false) => {
   if (!hotReload) {
     history = createBrowserHistory(options);
   }
 
   return history;
-};
-
-// 通常仅微前端场景需要调用这个 API
-export const setCreateHistoryOptions = (newOpts: any = {}) => {
-  options = { ...options, ...newOpts };
 };
 
 export { history };
