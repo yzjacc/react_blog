@@ -6,11 +6,9 @@ import { useHistory } from "umi";
 import { withRouter } from 'react-router-dom';
 import { complement, none } from 'ramda';
 
-let demo = 0;
 class Menu extends React.PureComponent {
     constructor(props) {
         super(props);
-        demo++;
         this.state = {
             i: 0,
             divStyle: {
@@ -40,13 +38,7 @@ class Menu extends React.PureComponent {
 
             })
         }, 10000)
-        if (demo == 1) {
-            setTimeout(() => {
-                this.props.history.push('/')
 
-            })
-            console.log('componentDidMount');
-        }
     }
     pop() {
         this.setState({

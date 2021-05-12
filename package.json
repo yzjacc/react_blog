@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:web": "umi dev",
+    "dev": "umi dev",
     "serve": "cd server && node app.js && nodemon app.js",
-    "build-resume": "cd resume-master && npm run build",
+    "build:resume": "cd resume-master && npm run build",
     "build:all": "npx umi build && npm run build-resume",
     "build:web": "npx umi build",
     "release": "standard-version",
