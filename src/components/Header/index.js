@@ -14,7 +14,7 @@ class Menu extends React.PureComponent {
             '春风又绿江南岸，明月何时照我还？',
             '举杯邀明月，对影成三人。',
             '月既不解饮，影徒随我身。',
-            '春风又绿江南岸，明月何时照我还？',
+            '春风又绿江南岸，明月何时照我还？'
             , '月出惊山鸟，时鸣春涧中。'
             , '人闲桂花落，夜静春山空。'
             , '黄昏庭院柳啼鸦，记得那人，和月折梨花。'
@@ -24,6 +24,8 @@ class Menu extends React.PureComponent {
             , '忽然一夜清香发，散作乾坤万里春。']
         this.i = 0;
         this.timer = null;
+        this.text = '';
+
         this.text = arr[Math.floor(Math.random() * 10)];
         this.state = {
             i: 0,
