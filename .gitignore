@@ -1,10 +1,12 @@
 node_modules
 .vscode
+dist
 id_github_rsa
 id_github_rsa.pub
 ssl/ssl.crt
 ssl/ssl.key
-src/.umi
+src/.umi/*
 src/.umi-production
 package-lock.json
+.umi
 
