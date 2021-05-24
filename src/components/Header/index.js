@@ -11,17 +11,15 @@ class Menu extends React.PureComponent {
     constructor(props) {
         super(props);
         let arr = ['天下大事，必作于细，天下难事，必作于易。',
-            '春风又绿江南岸，明月何时照我还？',
+            '冲天香阵透长安，满城尽带黄金甲。',
             '举杯邀明月，对影成三人。',
             '月既不解饮，影徒随我身。',
-            '春风又绿江南岸，明月何时照我还？'
-            , '月出惊山鸟，时鸣春涧中。'
+            '待到秋来九月八，我花开后百花杀。'
+            , '物有本末，事有终始。知所先后，则近道矣。'
             , '人闲桂花落，夜静春山空。'
             , '黄昏庭院柳啼鸦，记得那人，和月折梨花。'
             , '楼写春云色，珠含明月辉。'
-            , '忽然一夜清香发，散作乾坤万里春。',
-            , '忽然一夜清香发，散作乾坤万里春。',
-            , '忽然一夜清香发，散作乾坤万里春。']
+            , '雅俗共赏']
         this.i = 0;
         this.timer = null;
         this.text = '';
@@ -40,7 +38,7 @@ class Menu extends React.PureComponent {
 
         setInterval(() => {
             this.changeImg = Math.floor(Math.random()
-                * 100 / 2)
+                * 100 / 2 + 1)
             this.img = new Image()
             this.img.src = `https://pg12138.oss-cn-beijing.aliyuncs.com/img/2020/0${this.changeImg}.jpg`;
             this.img.onload = () => {
