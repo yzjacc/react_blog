@@ -37,7 +37,7 @@ export default
             <div className={styles.footer}>
               <div className={styles.logo}></div>
               <a className={styles.button} href={detailUrl}>
-                Try it
+                Try XMind
               </a>
             </div>
           </div>
