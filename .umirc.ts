@@ -94,7 +94,7 @@ export default {
     // }
     // })
   },
-  favicon: "https://pg12138.oss-cn-beijing.aliyuncs.com/img/favicon.svg",
+  favicon: "https://pg12138.oss-cn-beijing.aliyuncs.com/assets/other/favicon.svg",
   dynamicImport: {
     loading: "@/pages/load",
   },

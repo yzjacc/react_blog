@@ -13,7 +13,7 @@ tags:
 
 ### border-radius
 
-![photo 2019-07-19%20%E4%B8%8B%E5%8D%889.24.24](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-19%20%E4%B8%8B%E5%8D%889.24.24.png)
+![photo 2019-07-19%20%E4%B8%8B%E5%8D%889.24.24](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-19%20%E4%B8%8B%E5%8D%889.24.24.png)
 
 书写方式如下
 
@@ -44,7 +44,7 @@ tags:
 
 ### box-shadow
 
-![photo 2019-07-19%20%E4%B8%8B%E5%8D%889.35.51](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-19%20%E4%B8%8B%E5%8D%889.35.51.png)
+![photo 2019-07-19%20%E4%B8%8B%E5%8D%889.35.51](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-19%20%E4%B8%8B%E5%8D%889.35.51.png)
 
 box-shadow: 0px 0px 0px 0px #0ff  //外阴影 水平偏移量 垂直偏移量 以边框为标准向两侧同时模糊值 上下左右扩大像素 颜色
 
@@ -90,7 +90,7 @@ box-shadow:insert  0px 0px 0px 0px #0ff  //内阴影 水平偏移量 垂直偏�
 
 效果如下
 
-![photo 2019-07-19%20%E4%B8%8B%E5%8D%889.48.54](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-19%20%E4%B8%8B%E5%8D%889.48.54.png)
+![photo 2019-07-19%20%E4%B8%8B%E5%8D%889.48.54](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-19%20%E4%B8%8B%E5%8D%889.48.54.png)
 
 ```html
 <DOCYPE html>
@@ -131,7 +131,7 @@ box-shadow:insert  0px 0px 0px 0px #0ff  //内阴影 水平偏移量 垂直偏�
 
 效果如下
 
-![photo 2019-07-19%20%E4%B8%8B%E5%8D%889.53.54](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-19%20%E4%B8%8B%E5%8D%889.53.54.png)
+![photo 2019-07-19%20%E4%B8%8B%E5%8D%889.53.54](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-19%20%E4%B8%8B%E5%8D%889.53.54.png)
 
 ### 3.boder-image
 
@@ -143,7 +143,7 @@ box-shadow:insert  0px 0px 0px 0px #0ff  //内阴影 水平偏移量 垂直偏�
 
 #### border-image-slice ： 只能写数字 （不写默认值100%）
 
-![photo 2019-07-19%20%E4%B8%8B%E5%8D%8810.00.57](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-19%20%E4%B8%8B%E5%8D%8810.00.57.png)
+![photo 2019-07-19%20%E4%B8%8B%E5%8D%8810.00.57](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-19%20%E4%B8%8B%E5%8D%8810.00.57.png)
 
 按照图片分割像素
 
@@ -151,7 +151,7 @@ border-image-slice: 100 100 100 100;(上 右 下 左) fill可以填充内容区 
 
 如果默认值100% 也就是说整个图会覆盖该四个角
 
-![photo 2019-11-08%20%E4%B8%8B%E5%8D%887.12.47](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-08%20%E4%B8%8B%E5%8D%887.12.47.png)
+![photo 2019-11-08%20%E4%B8%8B%E5%8D%887.12.47](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-08%20%E4%B8%8B%E5%8D%887.12.47.png)
 
 #### border-image-width ：默认值1（倍数） 设置图片背景宽度 如果写auto 会自动取slice的值
 
@@ -161,19 +161,19 @@ border-image-slice: 100 100 100 100;(上 右 下 左) fill可以填充内容区 
 
 ##### stretch默认
 
-![photo 2019-07-19%20%E4%B8%8B%E5%8D%8810.17.30](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-19%20%E4%B8%8B%E5%8D%8810.17.30.png)
+![photo 2019-07-19%20%E4%B8%8B%E5%8D%8810.17.30](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-19%20%E4%B8%8B%E5%8D%8810.17.30.png)
 
 ##### round
 
-![photo 2019-07-19%20%E4%B8%8B%E5%8D%8810.11.58](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-19%20%E4%B8%8B%E5%8D%8810.11.58.png)
+![photo 2019-07-19%20%E4%B8%8B%E5%8D%8810.11.58](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-19%20%E4%B8%8B%E5%8D%8810.11.58.png)
 
 ##### repeat
 
-![photo 2019-07-19%20%E4%B8%8B%E5%8D%8810.11.25](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-19%20%E4%B8%8B%E5%8D%8810.11.25.png)
+![photo 2019-07-19%20%E4%B8%8B%E5%8D%8810.11.25](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-19%20%E4%B8%8B%E5%8D%8810.11.25.png)
 
 speace
 
-![photo 2019-07-19%20%E4%B8%8B%E5%8D%8810.13.00](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-19%20%E4%B8%8B%E5%8D%8810.13.00.png)
+![photo 2019-07-19%20%E4%B8%8B%E5%8D%8810.13.00](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-19%20%E4%B8%8B%E5%8D%8810.13.00.png)
 
 #### border-image：source slice repeat；
 
@@ -191,13 +191,13 @@ background-image:url(./#.jpg),url(./#1.jpg);
 
 ##### background-origin
 
-![photo 2019-11-08%20%E4%B8%8B%E5%8D%887.52.11](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-08%20%E4%B8%8B%E5%8D%887.52.11.png)
+![photo 2019-11-08%20%E4%B8%8B%E5%8D%887.52.11](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-08%20%E4%B8%8B%E5%8D%887.52.11.png)
 
 （图片从哪个位置开始加载）border-box padding-box（默认值） content-box
 
 ##### background-clip
 
-![photo 2019-11-08%20%E4%B8%8B%E5%8D%887.55.17](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-08%20%E4%B8%8B%E5%8D%887.55.17.png)
+![photo 2019-11-08%20%E4%B8%8B%E5%8D%887.55.17](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-19/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-08%20%E4%B8%8B%E5%8D%887.55.17.png)
 
 （图片从哪个位置截断）border-box（默认值）padding-box content-box 
 
@@ -210,7 +210,7 @@ background-clip:text;
 text-fill-color:transparent;
 ```
 
-![photo 2019-11-10%20%E4%B8%8B%E5%8D%882.37.33](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-21/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-10%20%E4%B8%8B%E5%8D%882.37.33.png)
+![photo 2019-11-10%20%E4%B8%8B%E5%8D%882.37.33](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-21/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-10%20%E4%B8%8B%E5%8D%882.37.33.png)
 
 ##### background-repeat 
 

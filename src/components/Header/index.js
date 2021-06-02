@@ -40,12 +40,12 @@ class Menu extends React.PureComponent {
             this.changeImg = Math.floor(Math.random()
                 * 100 / 2 + 1)
             this.img = new Image()
-            this.img.src = `https://pg12138.oss-cn-beijing.aliyuncs.com/img/2020/0${this.changeImg}.jpg`;
+            this.img.src = `https://pg12138.oss-cn-beijing.aliyuncs.com/assets/background/0${this.changeImg}.jpg`;
             this.img.onload = () => {
                 this.setState({
                     divStyle: {
                         ...this.state.divStyle,
-                        backgroundImage: `url(https://pg12138.oss-cn-beijing.aliyuncs.com/img/2020/0${this.changeImg}.jpg)`
+                        backgroundImage: `url(https://pg12138.oss-cn-beijing.aliyuncs.com/assets/background/0${this.changeImg}.jpg)`
                     }
                 })
             }

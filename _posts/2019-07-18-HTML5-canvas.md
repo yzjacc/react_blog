@@ -192,7 +192,7 @@ tags:
 
 ```
 
-![photo 2019-07-18%20%E4%B8%8B%E5%8D%883.25.50](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-18/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-18%20%E4%B8%8B%E5%8D%883.25.50.png)
+![photo 2019-07-18%20%E4%B8%8B%E5%8D%883.25.50](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-18/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-18%20%E4%B8%8B%E5%8D%883.25.50.png)
 
 ### 利用canvas画贝塞尔曲线
 
@@ -233,11 +233,11 @@ tags:
 
 几个点的匀速运动 画出的曲线
 
-![photo 2019-11-07%20%E4%B8%8B%E5%8D%885.23.27](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-18/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-07%20%E4%B8%8B%E5%8D%885.23.27.png)
+![photo 2019-11-07%20%E4%B8%8B%E5%8D%885.23.27](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-18/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-07%20%E4%B8%8B%E5%8D%885.23.27.png)
 
-![photo 2019-11-07%20%E4%B8%8B%E5%8D%885.25.02](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-18/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-07%20%E4%B8%8B%E5%8D%885.25.02.png)
+![photo 2019-11-07%20%E4%B8%8B%E5%8D%885.25.02](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-18/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-07%20%E4%B8%8B%E5%8D%885.25.02.png)
 
-![photo 2019-11-07%20%E4%B8%8B%E5%8D%885.25.14](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-18/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-07%20%E4%B8%8B%E5%8D%885.25.14.png)
+![photo 2019-11-07%20%E4%B8%8B%E5%8D%885.25.14](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-18/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-07%20%E4%B8%8B%E5%8D%885.25.14.png)
 
 ### 利用canvas坐标平移旋转与缩放
 
@@ -438,7 +438,7 @@ tags:
 
 ```
 
-![photo 2019-11-07%20%E4%B8%8B%E5%8D%885.48.59](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-18/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-07%20%E4%B8%8B%E5%8D%885.48.59.png)
+![photo 2019-11-07%20%E4%B8%8B%E5%8D%885.48.59](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-18/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-11-07%20%E4%B8%8B%E5%8D%885.48.59.png)
 
 ### 利用canvas阴影
 
@@ -599,5 +599,5 @@ tags:
 
 ### 
 
-### ![图片1](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-7-22/图片1.png)
+### ![图片1](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-7-22/图片1.png)
 

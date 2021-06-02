@@ -95,7 +95,7 @@ HTML+CSS 代码：
 
 效果：
 
-![img](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-6-24/clip_image003.png)
+![img](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-6-24/clip_image003.png)
 
 至于上下的边距，别急，还有更奇怪的，我们往这两个div任意一个里面加点文字
 
@@ -148,7 +148,7 @@ HTML+CSS 代码：
 
 效果：
 
-![ads](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-6-24/clip_image004.png)
+![ads](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-6-24/clip_image004.png)
 
 到这就完全摸不着头脑了。
 
@@ -168,7 +168,7 @@ inline-block的基线是正常流中最后一个line box的基线，除非，这
 
 如图：基线(Baseline)是大部分字母所“坐”在的，字体的下降部之上的直线。下图红色的直线就是基线。
 
-![text-top  text-bottom  middle  baseline  top  bottom ](https://pg12138.oss-cn-beijing.aliyuncs.com/img/in-post/2019-6-24/clip_image005.gif)
+![text-top  text-bottom  middle  baseline  top  bottom ](https://pg12138.oss-cn-beijing.aliyuncs.com/assets/in-post/2019-6-24/clip_image005.gif)
 
 **正经原因：**
 
