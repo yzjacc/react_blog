@@ -14,7 +14,7 @@ export default function Menu() {
             <div className={styles.module}>
                 <h2 className={styles.title}>&#xe6da; EveryDay Music</h2>
                 {/* <Clock></Clock> */}
-                <Music src ={"https://pg12138.oss-cn-beijing.aliyuncs.com/assets/other/Janet%20Seidel-You%20Belong%20To%20Me.mp3"}></Music>
+                <Music id={123} src ={"https://pg12138.oss-cn-beijing.aliyuncs.com/assets/other/Janet%20Seidel-You%20Belong%20To%20Me.mp3"}></Music>
             </div>    
 
             {/* <div className={styles.module}> */}

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from './index.less'
+import styles from "./index.less";
 
 class App extends Component {
   constructor(props) {
@@ -15,9 +15,7 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
-    this.playAudio()
-  }
+  componentDidMount() {}
 
   formatSecond(time) {
     const second = Math.floor(time % 60);
@@ -146,8 +144,10 @@ class App extends Component {
         )}
 
         <div className={styles.second}>
-          <span >
-            {this.formatSecond(currentTime) + " / " + this.formatSecond(allTime)}
+          <span>
+            {this.formatSecond(currentTime) +
+              "  /  " +
+              this.formatSecond(allTime)}
           </span>
           {/* <input
             type="range"

@@ -1,6 +1,6 @@
 import React from 'react';
 import Content from '../../components/Content'
-import Aside from '../../components/Aside'
+import Aside from '../../components/Aside/index'
 import styles from './index.less'
 import { connect } from "dva"
 
