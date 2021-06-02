@@ -17,7 +17,7 @@ class Tag extends PureComponent {
         const blogList = []
         for (let label in this.props.content) {
             //key bug
-            blogList.push(<div className={styles.tag} key={Math.random()} style={{ fontSize: 13 + Math.random() * 10 + "px" }} onClick={() => { this.props.onGetLabelBlogs(label) }}>
+            blogList.push(<div className={styles.tag} key={Math.random()} style={{ fontSize: 13 + Math.random() * 10 + "px" }} onClick={() => {  }}>
                 {label}
             </div>)
         }

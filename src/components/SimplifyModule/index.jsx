@@ -19,6 +19,7 @@ export default
           imgUrl,
           isShowImg = true,
           detailUrl,
+          imgStyle = null
         } = this.props.data;
         return (
           <div className={styles.main}>
@@ -28,7 +29,7 @@ export default
             </div>
             <div className={styles.essay}>
               {isShowImg ? (
-                <div className={styles.essImg}>
+                <div className={styles.essImg} style={imgStyle}>
                   <img className={styles.img} src={imgUrl} />
                 </div>
               ) : null}
