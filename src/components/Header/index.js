@@ -53,16 +53,18 @@ class Menu extends React.PureComponent {
 
     }
     componentDidMount() {
-        this.timer = setInterval(() => {
-            this.setState({
-                text: this.text.substring(0, this.i)
-            }, () => {
-                this.i++;
-                if (this.state.text == this.text) {
-                    clearInterval(this.timer);
-                };
-            })
-        }, 200);
+        setTimeout(() => {
+            this.timer = setInterval(() => {
+                this.setState({
+                    text: this.text.substring(0, this.i)
+                }, () => {
+                    this.i++;
+                    if (this.state.text == this.text) {
+                        clearInterval(this.timer);
+                    };
+                })
+            }, 200);
+        }, 1500)
 
     }
     pop() {
