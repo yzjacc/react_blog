@@ -82,9 +82,9 @@ class Menu extends React.PureComponent {
     render() {
         return (
             <div className={styles.menu} style={this.state.divStyle}>
-                <div className={styles.leftTitle}>Will Yu</div>
+                <div className={styles.leftTitle}>Bill Yu</div>
                 <div className={styles.contain}>
-                    <div className={styles.title}>Will Yu</div>
+                    <div className={styles.title}>Bill Yu</div>
                     <div className={styles.bottom}>{this.state.text}</div>
                 </div>
 
