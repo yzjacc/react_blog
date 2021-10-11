@@ -1,26 +1,26 @@
 /* webpack.config.js
  * @ Cong Min
  */
-// const webpack = require('webpack');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-
+const env = process.env.NODE_ENV;
 module.exports = {
     entry: {
         app: ['./src/entry.js']
     },
     output: {
-        filename: '../dist/static/[name].js?[hash:6]',
+        filename: env  == 'development' ? '../dist/static/[name].js?[hash:6]':'./static/[name].js?[hash:6]',
         path: path.resolve(__dirname)
     },
     devServer: {
-        contentBase: path.resolve(__dirname)
+        contentBase: path.resolve(__dirname),
     },
     plugins: [
-        // new webpack.HotModuleReplacementPlugin(),
+        env  == 'development' ? null : new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            filename: '../dist/resume.html',
+            filename: env  == 'development' ? '../dist/resume.html' : './resume.html',
             inject: 'head',
             minify: {
                 collapseWhitespace: true,
