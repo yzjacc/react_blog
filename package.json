@@ -1,6 +1,6 @@
 {
   "name": "Zijun_blog",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,15 +18,11 @@
   "author": "yuzijun",
   "license": "ISC",
   "dependencies": {
-    "@ant-design/icons": "^4.0.6",
-    "@umijs/preset-react": "^1.4.17",
     "analyze": "0.0.14",
-    "antd": "^4.1.4",
     "axios": "^0.19.2",
     "commitizen": "^4.2.1",
     "core-js": "^3.6.5",
     "forever": "^4.0.1",
-    "dva": "^2.4.1",
     "git-cz": "^4.7.1",
     "github-markdown-css": "^4.0.0",
     "highlight.js": "^10.0.0",
@@ -45,7 +41,11 @@
     "umi": "^3.2.9"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "^3.3.0"
+    "@umijs/preset-react": "^1.4.17",
+    "@ant-design/icons": "^4.0.6",
+    "antd": "^4.1.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "dva": "^2.4.1"
   },
   "config": {
     "commitizen": {
