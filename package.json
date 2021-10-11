@@ -25,6 +25,7 @@
     "axios": "^0.19.2",
     "commitizen": "^4.2.1",
     "core-js": "^3.6.5",
+    "forever": "^4.0.1",
     "dva": "^2.4.1",
     "git-cz": "^4.7.1",
     "github-markdown-css": "^4.0.0",
