@@ -10,17 +10,17 @@ module.exports = {
         app: ['./src/entry.js']
     },
     output: {
-        filename: env  == 'development' ? '../dist/static/[name].js?[hash:6]':'./static/[name].js?[hash:6]',
+        filename: env  == 'production' ? '../dist/static/[name].js?[hash:6]':'./static/[name].js?[hash:6]',
         path: path.resolve(__dirname)
     },
     devServer: {
         contentBase: path.resolve(__dirname),
     },
     plugins: [
-        env  == 'development' ? null : new webpack.HotModuleReplacementPlugin(),
+        env  == 'production' ? null : new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            filename: env  == 'development' ? '../dist/resume.html' : './resume.html',
+            filename: env  == 'production' ? '../dist/resume.html' : './resume.html',
             inject: 'head',
             minify: {
                 collapseWhitespace: true,
