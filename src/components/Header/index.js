@@ -23,6 +23,7 @@ class Menu extends React.PureComponent {
         this.i = 0;
         this.timer = null;
         this.text = '';
+        this.leftTitle = 'Bill Yu';
 
         this.text = arr[Math.floor(Math.random() * 10)];
         this.state = {
@@ -82,7 +83,11 @@ class Menu extends React.PureComponent {
     render() {
         return (
             <div className={styles.menu} style={this.state.divStyle}>
-                <div className={styles.leftTitle}>Bill Yu</div>
+                <div className={styles.leftTitle} onClick={
+                    this.setState({
+                        leftTitle: '欢迎猪猪宝贝'
+                    })
+                }>{this.leftTitle}</div>
                 <div className={styles.contain}>
                     <div className={styles.title}>Bill Yu</div>
                     <div className={styles.bottom}>{this.state.text}</div>
