@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/yzjacc/React_blog/compare/v1.8.1...v1.9.0) (2022-02-08)
+
+
+### Features
+
+* 🎸 webpack更新 简历更新 ([0860f68](https://github.com/yzjacc/React_blog/commit/0860f68c60a33a86389ae1daa33be9ef6a2118f5))
+* 🎸 简历内容更新 ([3eb134a](https://github.com/yzjacc/React_blog/commit/3eb134a8d2c54343fa3073117fd76ea8385f8747))
+* 新增title彩蛋、简历更新 ([b19fff3](https://github.com/yzjacc/React_blog/commit/b19fff3bceaac2c43795556069f663dc6608374e))
+
+
+### Bug Fixes
+
+* 🐛 package npm包分开 ([2e7104f](https://github.com/yzjacc/React_blog/commit/2e7104fe0bd9992bc8b1d0c4a5cd593fb978f3c0))
+* 🐛 webpack配置修复 ([69dc434](https://github.com/yzjacc/React_blog/commit/69dc4341aae1f5e699a169f1943e700b83583a11))
+
 ### [1.8.1](https://github.com/yzjacc/React_blog/compare/v1.8.0...v1.8.1) (2021-10-11)
 
 ## 1.8.0 (2021-10-11)
