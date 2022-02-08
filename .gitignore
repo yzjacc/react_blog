@@ -8,5 +8,7 @@ ssl/ssl.key
 src/.umi/*
 src/.umi-production
 package-lock.json
+yarn-error.log
+yarn.lock
 .umi
 
