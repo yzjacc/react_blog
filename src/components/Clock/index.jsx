@@ -1,7 +1,6 @@
-import React from 'react';
+import React from "react";
 
 class Clock extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = this.getTime();
@@ -32,28 +31,20 @@ class Clock extends React.Component {
       hours: currentTime.getHours(),
       minutes: currentTime.getMinutes(),
       seconds: currentTime.getSeconds(),
-      ampm: currentTime.getHours() >= 12 ? 'PM' : 'AM'
-    }
+      ampm: currentTime.getHours() >= 12 ? "PM" : "AM",
+    };
   }
 
   render() {
-    const {hours, minutes, seconds, ampm} = this.state;
+    const { hours, minutes, seconds, ampm } = this.state;
     return (
-      <div className="clock" style={{fontSize:"20px"}}>
-        
-        {ampm} {" "}
-        {
-          hours == 0 ? 12 :
-            (hours > 12) ?
-              hours - 12 : hours
-        }:{
-          minutes > 9 ? minutes : `0${minutes}`
-        }:{
-          seconds > 9 ? seconds : `0${seconds}`
-        } 
+      <div className="clock" style={{ fontSize: "20px" }}>
+        {ampm} {hours == 0 ? 12 : hours > 12 ? hours - 12 : hours}:
+        {minutes > 9 ? minutes : `0${minutes}`}:
+        {seconds > 9 ? seconds : `0${seconds}`}
       </div>
-    )
+    );
   }
 }
 
-export default Clock
+export default Clock;
