@@ -98,4 +98,5 @@ export default {
   dynamicImport: {
     loading: "@/pages/load",
   },
+  mfsu: { production: { output: '.mfsu-production' } },
 };
