@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "umi dev",
+    "dev": "rm -rf src/.umi && umi dev",
     "serve": "cd server && node app.js && nodemon app.js",
     "build:resume": "cd resume-master && npm run build",
     "build:all": "npx umi build && npm run build-resume",
@@ -22,9 +22,9 @@
   "dependencies": {
     "analyze": "0.0.14",
     "axios": "^0.19.2",
-    "core-js": "^3.6.5",
-    "forever": "^4.0.1",
-    "koa": "^2.11.0",
+    "core-js": "^3.21.0",
+    "forever": "^4.0.3",
+    "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^8.0.8",
     "koa-sslify": "^4.0.3",
@@ -32,28 +32,28 @@
     "koa2-cors": "^2.0.6",
     "markdown-it": "^10.0.0",
     "mysql": "^2.18.1",
-    "nodemon": "^2.0.7",
-    "ramda": "^0.27.0",
-    "react-masonry-component": "^6.2.1"
+    "nodemon": "^2.0.15",
+    "ramda": "^0.27.2",
+    "react-masonry-component": "^6.3.0"
   },
   "devDependencies": {
-    "@ant-design/icons": "^4.0.6",
+    "@ant-design/icons": "^4.7.0",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
-    "@umijs/preset-react": "^1.4.17",
-    "antd": "^4.1.4",
-    "commitizen": "^4.2.1",
+    "@umijs/preset-react": "^1.8.30",
+    "antd": "^4.18.5",
+    "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
     "dva": "^2.4.1",
     "eslint": "^8.8.0",
     "eslint-plugin-react": "^7.28.0",
-    "git-cz": "^4.7.1",
+    "git-cz": "^4.8.0",
     "github-markdown-css": "^4.0.0",
-    "highlight.js": "^10.0.0",
+    "highlight.js": "^10.7.3",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.3",
-    "standard-version": "^9.0.0",
-    "umi": "^3.5.0"
+    "standard-version": "^9.3.2",
+    "umi": "^3.5.20"
   },
   "config": {
     "commitizen": {

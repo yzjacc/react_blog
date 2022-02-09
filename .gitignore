@@ -10,5 +10,7 @@ src/.umi-production
 package-lock.json
 yarn-error.log
 yarn.lock
+pnpm-lock.yaml
 .umi
+*.DS_Store
 
