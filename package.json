@@ -13,7 +13,9 @@
     "release": "standard-version",
     "commit": "git-cz",
     "analyze": "ANALYZE=1 npx umi build",
-    "dev:resume": "cd resume-master && npm run dev"
+    "dev:resume": "cd resume-master && npm run dev",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
   },
   "author": "yuzijun",
   "license": "ISC",
@@ -48,18 +50,14 @@
     "git-cz": "^4.7.1",
     "github-markdown-css": "^4.0.0",
     "highlight.js": "^10.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.3",
     "standard-version": "^9.0.0",
     "umi": "^3.5.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
