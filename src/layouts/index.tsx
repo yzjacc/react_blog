@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./index.less";
 
-export default function index(props) {
+export default function index(props: any) {
   return (
     <div>
       <Header></Header>

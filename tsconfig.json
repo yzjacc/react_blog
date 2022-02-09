@@ -11,14 +11,14 @@
     "declaration": false,
     "jsx": "preserve",
     "experimentalDecorators": true,
+    "noUnusedLocals": true,
     "resolveJsonModule": true,
     "moduleResolution": "node",
     "paths": {
-      "@/*": ["./src/*"],
-      "@@/*": ["./node_modules/.jupiter_exports/*"]
+      "@/*": ["./src"]
     }
   },
-  "include": ["src", "api", "electron"],
+  "typeRoots": ["./node_modules/@types", "./@types"],
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Base"
 }
