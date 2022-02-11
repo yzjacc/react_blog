@@ -1,0 +1,42 @@
+import React, { useEffect } from "react";
+import styles from "./index.less";
+import { connect } from "dva";
+const Tag = ({ onGetContents, content }: any) => {
+  useEffect(() => {
+    onGetContents();
+  }, []);
+
+  const blogList = [];
+  for (const label in content) {
+    //key bug
+    blogList.push(
+      <div
+        className={styles.tag}
+        key={Math.random()}
+        style={{ fontSize: 13 + Math.random() * 10 + "px" }}
+        onClick={() => {
+          console.log("tagClick");
+        }}
+      >
+        {label}
+      </div>
+    );
+  }
+  return blogList;
+};
+
+const mapStateToProps = (state: any) => ({
+  content: state.label.labelList,
+  total: state.label.labelCount,
+});
+
+const mapDispatchToProps = (dispatch: any) => ({
+  onGetContents() {
+    dispatch({ type: "label/getContents" });
+  },
+  onGetLabelBlogs(e: any) {
+    dispatch({ type: "essay/getLabelBlogs", payload: e });
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Tag);
