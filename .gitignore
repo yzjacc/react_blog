@@ -13,4 +13,5 @@ yarn.lock
 pnpm-lock.yaml
 .umi
 *.DS_Store
+.mfsu-production
 
