@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./index.less";
-import imgBase64 from "./backImg";
+import imgBase64 from "./assets/backImg";
 import { useHistory } from "umi";
 
 const Menu = () => {

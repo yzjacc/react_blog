@@ -1,9 +1,9 @@
 import styles from "./index.less";
 import React, { useEffect, useRef, useState } from "react";
-import { ReactComponent as Play } from "./play.svg";
-import { ReactComponent as Pause } from "./pause.svg";
-import { ReactComponent as Next } from "./next.svg";
-import { ReactComponent as Prev } from "./prev.svg";
+import { ReactComponent as Play } from "./assets/play.svg";
+import { ReactComponent as Pause } from "./assets/pause.svg";
+import { ReactComponent as Next } from "./assets/next.svg";
+import { ReactComponent as Prev } from "./assets/prev.svg";
 
 type tracks = {
   tracks: {
