@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./style.less";
 import Tag from "../Tag";
-import Music from "../Music";
+import Music from "../MusicPlayer";
 
 export default function Menu() {
   return (
