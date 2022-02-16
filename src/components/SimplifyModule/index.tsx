@@ -1,7 +1,17 @@
 import styles from "./index.less";
-import React from "react";
-
-const SimplifyModule = ({ data }: any) => {
+import React, { FC } from "react";
+interface IProps {
+  data: {
+    time?: string;
+    title?: string;
+    content?: string;
+    imgUrl?: string;
+    detailUrl?: string;
+    isShowImg?: boolean;
+    imgStyle?: object;
+  };
+}
+const SimplifyModule = ({ data }: IProps) => {
   const {
     time,
     title,
@@ -9,7 +19,7 @@ const SimplifyModule = ({ data }: any) => {
     imgUrl,
     isShowImg = true,
     detailUrl,
-    imgStyle = null,
+    imgStyle,
   } = data;
 
   return (

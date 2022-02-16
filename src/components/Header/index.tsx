@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, FC } from "react";
 import styles from "./index.less";
 import imgBase64 from "./assets/backImg";
 import { useHistory } from "umi";
 
-const Menu = () => {
+const Menu: FC = () => {
   const history = useHistory();
   const [state, setState] = useState({
     text: "",

@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, FC } from "react";
 import styles from "./index.less";
 import { connect } from "dva";
 import { NavLink } from "umi";
 
-const CountentTitle = ({ onGetContents, content, total }: any) => {
+const CountentTitle: FC = ({ onGetContents, content, total }: any) => {
   useEffect(() => {
     onGetContents();
   }, []);
