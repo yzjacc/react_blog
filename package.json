@@ -10,7 +10,7 @@
     "build:resume": "cd resume-master && npm run build",
     "build:all": "npx umi build && npm run build:resume",
     "build:web": "npx umi build",
-    "release": "standard-version -r major",
+    "release": "standard-version -r minor",
     "commit": "git-cz",
     "analyze": "ANALYZE=1 npx umi build",
     "dev:resume": "cd resume-master && npm run dev",
