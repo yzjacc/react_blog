@@ -1,6 +1,6 @@
 {
   "name": "Zijun_blog",
-  "version": "1.9.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "build:resume": "cd resume-master && npm install && npm run build",
     "build:all": "npx umi build && npm run build:resume",
     "build:web": "npx umi build",
-    "release": "standard-version",
+    "release": "standard-version -r minor",
     "commit": "git-cz",
     "analyze": "ANALYZE=1 npx umi build",
     "dev:resume": "cd resume-master && npm run dev",
