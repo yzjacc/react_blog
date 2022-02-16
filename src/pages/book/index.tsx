@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import styles from "./index.less";
 import SimplifyModule from "../../components/SimplifyModule";
-import bookList from "../../const/book.json";
+import bookList from "../../assets/book.json";
 
 const App: FC = () => {
   return (
