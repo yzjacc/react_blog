@@ -21,12 +21,12 @@ export default {
     // }
   },
   effects: {
-    *getContents(action: any, { put }: any) {
-      let content = yield Axios.get(api + "blog/getlabeltotal");
+    *getContents(action: any, { put }: any): any {
+      const content = yield Axios.get(api + "blog/getlabeltotal");
       yield put({ type: "getContent", payload: content.data });
     },
-    *getLabelBlogs(action: any, { put }: any) {
-      let content = yield Axios.get(api + "getlabelblogs/" + "HTML");
+    *getLabelBlogs(action: any, { put }: any): any {
+      const content = yield Axios.get(api + "getlabelblogs/" + "HTML");
       yield put({ type: "getLabelBlogs", payload: content.data });
     },
   },

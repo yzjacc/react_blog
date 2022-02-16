@@ -1,9 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 import styles from "./index.less";
 import SimplifyModule from "../../components/SimplifyModule";
 import bookList from "../../const/book.json";
 
-export default () => {
+const App: FC = () => {
   return (
     <div className={styles.content}>
       {bookList.data.map((element, index) => {
@@ -23,3 +23,4 @@ export default () => {
     </div>
   );
 };
+export default App;

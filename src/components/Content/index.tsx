@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, FC } from "react";
 import styles from "./index.less";
 import MDRender from "../Markdown";
 import { NavLink } from "umi";
 import { connect } from "dva";
-const Counter = ({ onGetContents, content }: any) => {
+const Counter: FC = ({ onGetContents, content }: any) => {
   useEffect(() => {
     onGetContents();
   }, []);

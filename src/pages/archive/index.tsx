@@ -1,9 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 import styles from "./index.less";
 import Tag from "../../components/Tag";
 import ContentTitle from "../../components/ContentTitle";
 
-export default () => {
+const App: FC = () => {
   return (
     <div className={styles.content}>
       <div className={styles.tag}>
@@ -13,3 +13,4 @@ export default () => {
     </div>
   );
 };
+export default App;

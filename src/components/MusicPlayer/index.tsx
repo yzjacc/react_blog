@@ -1,5 +1,5 @@
 import styles from "./index.less";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, FC } from "react";
 import { ReactComponent as Play } from "./assets/play.svg";
 import { ReactComponent as Pause } from "./assets/pause.svg";
 import { ReactComponent as Next } from "./assets/next.svg";

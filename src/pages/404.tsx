@@ -1,6 +1,7 @@
 import { Result, Button } from "antd";
+import React, { FC } from "react";
 
-export default function () {
+const App: FC = () => {
   return (
     <Result
       status="404"
@@ -9,4 +10,5 @@ export default function () {
       extra={<Button type="primary">Back Home</Button>}
     />
   );
-}
+};
+export default App;

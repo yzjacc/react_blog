@@ -11,12 +11,12 @@ export default {
     },
   },
   effects: {
-    *getContents(action: any, { put }: any) {
-      let content = yield Axios.get(api + "blog/getblogs");
+    *getContents(action: any, { put }: any): any {
+      const content = yield Axios.get(api + "blog/getblogs");
       yield put({ type: "getContent", payload: content.data });
     },
-    *getLabelBlogs(action: any, { put }: any) {
-      let content = yield Axios.get(
+    *getLabelBlogs(action: any, { put }: any): any {
+      const content = yield Axios.get(
         api + "blog/getlabelblogs/" + action.payload
       );
       yield put({ type: "getContent", payload: content.data });

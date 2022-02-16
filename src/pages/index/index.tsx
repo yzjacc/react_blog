@@ -1,12 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
 import Content from "../../components/Content";
 import Aside from "../../components/Aside/index";
 import styles from "./index.less";
+import { Pagination } from "antd";
 import { connect } from "dva";
 
-import { Pagination } from "antd";
-
-function f(props: any) {
+const App: FC = (props: any) => {
   return (
     <>
       <div className={styles.aside}>
@@ -28,7 +27,7 @@ function f(props: any) {
       </div>
     </>
   );
-}
+};
 const mapStateToProps = (state: any) => ({
   total: state.pageBlog.blogCount,
 });
@@ -39,4 +38,4 @@ const mapDispatchToProps = (dispatch: any) => ({
   },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(f);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

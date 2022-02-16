@@ -1,9 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 import styles from "./style.less";
 import Tag from "../Tag";
 import Music from "../MusicPlayer";
 
-export default function Menu() {
+const App: FC = () => {
   return (
     <div className={styles.aside}>
       <div className={styles.module}>
@@ -44,4 +44,5 @@ export default function Menu() {
             </div> */}
     </div>
   );
-}
+};
+export default App;

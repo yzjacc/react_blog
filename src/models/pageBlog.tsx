@@ -15,16 +15,16 @@ export default {
         ...payload,
       };
     },
-    getContent(state: any, { payload }: any) {
+    getContent(state: any, { payload }: any): any {
       return {
         ...payload,
       };
     },
   },
   effects: {
-    *getPageBlog(action: any, { put }: any) {
-      let page = action.payload;
-      let content = yield Axios.get(api + "blog/getblogs/" + page);
+    *getPageBlog(action: any, { put }: any): any {
+      const page = action.payload;
+      const content = yield Axios.get(api + "blog/getblogs/" + page);
       yield put({ type: "getSingleBlog", payload: content.data });
     },
   },
