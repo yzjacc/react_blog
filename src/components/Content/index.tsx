@@ -3,7 +3,19 @@ import styles from "./index.less";
 import MDRender from "../Markdown";
 import { NavLink } from "umi";
 import { connect } from "dva";
-const Counter: FC = ({ onGetContents, content }: any) => {
+interface IProps {
+  onGetContents: () => string;
+  onGetLabelBlogs: (e: string) => string;
+  total: number;
+  content: {
+    id: number;
+    title: string;
+    time: string;
+    content: string;
+  }[];
+}
+
+const Counter = ({ onGetContents, content }: IProps) => {
   useEffect(() => {
     onGetContents();
   }, []);

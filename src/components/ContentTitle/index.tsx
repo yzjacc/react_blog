@@ -2,8 +2,19 @@ import React, { useEffect, FC } from "react";
 import styles from "./index.less";
 import { connect } from "dva";
 import { NavLink } from "umi";
+interface IProps {
+  onGetContents: () => string;
+  onGetLabelBlogs: (e: string) => string;
+  total: number;
+  content: Record<string, Content>;
+}
 
-const CountentTitle: FC = ({ onGetContents, content, total }: any) => {
+interface Content {
+  id: number;
+  title: string;
+  time: string;
+}
+const CountentTitle = ({ onGetContents, content, total }: IProps) => {
   useEffect(() => {
     onGetContents();
   }, []);

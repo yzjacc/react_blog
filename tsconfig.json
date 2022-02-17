@@ -11,7 +11,7 @@
     "declaration": false,
     "jsx": "preserve",
     "experimentalDecorators": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "resolveJsonModule": true,
     "moduleResolution": "node",
     "paths": {

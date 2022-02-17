@@ -5,7 +5,7 @@ import { ReactComponent as Pause } from "./assets/pause.svg";
 import { ReactComponent as Next } from "./assets/next.svg";
 import { ReactComponent as Prev } from "./assets/prev.svg";
 
-type tracks = {
+interface IProps {
   tracks: {
     title?: string;
     artist?: string;
@@ -13,9 +13,9 @@ type tracks = {
     image?: string;
     color?: string;
   }[];
-};
+}
 
-const AudioPlayer = ({ tracks }: tracks) => {
+const AudioPlayer = ({ tracks }: IProps) => {
   // State
   const [trackIndex, setTrackIndex] = useState(0);
   const [trackProgress, setTrackProgress] = useState(0);

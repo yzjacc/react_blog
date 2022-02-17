@@ -2,8 +2,12 @@ import React, { useEffect } from "react";
 import styles from "./index.less";
 import { connect } from "dva";
 import { useHistory } from "umi";
-
-const Tag = ({ onGetContents, content, onGetLabelBlogs }: any) => {
+interface IProps {
+  onGetContents: () => string;
+  onGetLabelBlogs: (e: string) => string;
+  content: Record<string, string>;
+}
+const Tag = ({ onGetContents, content, onGetLabelBlogs }: IProps) => {
   const history = useHistory();
   console.log(history);
 
