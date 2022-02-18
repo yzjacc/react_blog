@@ -1,14 +1,22 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./index.less";
 
-const Layout: FC = ({ children }) => {
+const Layout: FC = (e) => {
+  const [isRender, setRender] = useState(false);
+  useEffect(() => {
+    setRender(true);
+  }, []);
   return (
     <div>
       <Header></Header>
-      <div className="content">{children}</div>
-      <Footer></Footer>
+      {isRender && (
+        <>
+          <div className="content">{e.children}</div>
+          <Footer></Footer>
+        </>
+      )}
     </div>
   );
 };
