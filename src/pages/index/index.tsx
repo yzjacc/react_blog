@@ -1,11 +1,16 @@
-import React, { FC } from "react";
+import React from "react";
 import Content from "../../components/Content";
 import Aside from "../../components/Aside/index";
 import styles from "./index.less";
 import { Pagination } from "antd";
 import { connect } from "dva";
 
-const App: FC = (props: any) => {
+interface IProps {
+  onGetPage: () => string;
+  onGetLabelBlogs: (e: string) => string;
+  total: number;
+}
+const App = ({ onGetPage, total }: IProps) => {
   return (
     <>
       <div className={styles.aside}>
@@ -19,10 +24,10 @@ const App: FC = (props: any) => {
         <Pagination
           size="small"
           simple
-          total={props.total}
+          total={total}
           pageSize={5}
           className={styles.Pagination}
-          onChange={props.onGetPage}
+          onChange={onGetPage}
         />
       </div>
     </>
@@ -33,7 +38,7 @@ const mapStateToProps = (state: any) => ({
 });
 
 const mapDispatchToProps = (dispatch: any) => ({
-  onGetPage(e: any) {
+  onGetPage(e: number) {
     dispatch({ type: "pageBlog/getPageBlog", payload: e - 1 });
   },
 });
